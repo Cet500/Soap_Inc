@@ -1,0 +1,72 @@
+/* ------------------------------- global ------------------------------- */
+
+/* -------------------- body -------------------- */
+
+.global__body{
+	display: grid;
+	grid-template-areas: "header"
+						 "main"
+						 "footer";
+	grid-template-rows: 70px 1fr auto;
+	grid-template-columns: 1fr;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+/* -------------------- header -------------------- */
+
+.header{
+	position: sticky;
+	top: 0;
+	grid-area: header;
+	z-index: 10;
+	background-color: #ffffff;
+}
+.header__inner{
+	display: flex;
+	align-items: center;
+	width: 75%;
+	margin: 5px auto;
+}
+
+/* -------------------- navigation -------------------- */
+
+.nav{
+	display: flex;
+	justify-content: center;
+	flex-grow: 2;
+}
+
+/* -------------------- main -------------------- */
+
+.main{
+	grid-area: main;
+}
+.main__inner{
+	width: 75%;
+	margin: 0 auto;
+}
+
+/* -------------------- forms -------------------- */
+
+.form-subscribe__input-text{
+	padding: 25px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.1em;
+	width: 50%;
+}
+.form-subscribe__input-text:focus{
+	outline: 2px solid #333333;
+}
+
+/* -------------------- footer -------------------- */
+
+.footer{
+	grid-area: footer;
+}
+.footer__inner{
+	width: 75%;
+	margin: 0 auto 25px;
+}
