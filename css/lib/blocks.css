@@ -1,0 +1,122 @@
+/* ------------------------------- blocks ------------------------------- */
+
+/* -------------------- sections -------------------- */
+
+.section{
+	margin: 35px 0;
+
+	border-radius: 30px;
+}
+.section-border{
+	border: 3px solid #deb9f5;
+}
+
+.section__inner{
+	padding: 25px 35px;
+}
+.section__flex{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+/* -------------------- inner blocks -------------------- */
+
+.block{
+	min-width: 20%;
+	flex-basis: 20%;
+	flex-grow: 1;
+	flex-shrink: 1;
+	margin: 10px;
+	padding: 1px 20px 10px;
+	border-radius: 20px;
+}
+
+/* -------------------- block of showcase -------------------- */
+
+.block-show > img{
+	width: 100%;
+	transition: transform 0.3s ease;
+}
+.block-show:hover > img{
+	transform: scale(1.2);
+}
+.block-show:hover .price{
+	font-weight: 900;
+}
+
+/* -------------------- block of advantages -------------------- */
+
+.block-plus{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	flex-basis: 45%;
+}
+.block-plus > img{
+	width: 55px;
+	height: 55px;
+
+	margin-right: 10px;
+}
+.block-plus > p{
+	font-family: Roboto, serif;
+	font-size: 1.25em;
+	margin: 0.5em;
+}
+
+/* -------------------- block of feedback -------------------- */
+
+.block-feedback{
+	display: grid;
+	grid-template-areas: "bf_ava  bf_name bf_like"
+                         "bf_text bf_text bf_text";
+	grid-template-rows: 70px 1fr;
+	grid-template-columns: 70px 1fr auto;
+	flex-basis: 27%;
+	padding: 15px 15px 10px;
+	background-color: #e1c1f4;
+}
+.block-feedback__ava{
+	grid-area: bf_ava;
+	width: 60px;
+	padding: 5px;
+	border-radius: 50%;
+}
+.block-feedback__name{
+	grid-area: bf_name;
+	padding-left: 7px;
+}
+.block-feedback__like{
+	grid-area: bf_like;
+	width: 40px;
+	padding: 15px;
+}
+.block-feedback__text{
+	grid-area: bf_text;
+}
+
+/* -------------------- block of footer -------------------- */
+
+.block-footer{
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 0.6fr 0.6fr 0.7fr;
+	grid-column-gap: 20px;
+	padding: 40px 30px;
+	border-radius: 30px;
+	border: 2px solid #e1c1f4;
+}
+.block-footer__col{
+	display: flex;
+	flex-direction: column;
+}
+.block-footer__col .title-h3{
+	margin-top: 0;
+}
+.block-footer__col .link{
+	margin-left: -4px;
+}

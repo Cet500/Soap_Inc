@@ -1,0 +1,28 @@
+/* ------------------------------- colors ------------------------------- */
+
+/* -------------------- background colors -------------------- */
+
+.clr-white{
+	background-color: #fbf1f7;
+}
+.clr-pink{
+	background-color: #ffbdd3;
+}
+.clr-purple{
+	background-color: #e1c1f4;
+}
+
+/* -------------------- text colors -------------------- */
+
+.clr-white-text{
+	color: white;
+}
+.clr-grey-text{
+	color: gray;
+}
+.clr-darkgrey-text{
+	color: #333333;
+}
+.clr-black-text{
+	color: black;
+}
