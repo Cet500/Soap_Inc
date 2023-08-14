@@ -1,0 +1,110 @@
+/* ------------------------------- global ------------------------------- */
+
+/* -------------------- body -------------------- */
+
+.body{
+	display: grid;
+	grid-template-areas: "header"
+						 "main"
+						 "footer";
+	grid-template-rows: 70px 1fr auto;
+	grid-template-columns: 1fr;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+/* -------------------- header -------------------- */
+
+.header{
+	position: sticky;
+	top: 0;
+	grid-area: header;
+	z-index: 10;
+	background-color: #ffffff;
+}
+.header__inner{
+	display: flex;
+	align-items: center;
+	width: 75%;
+	margin: 5px auto;
+}
+.header__tel{
+
+}
+.header__tel-text{
+
+}
+.header__tel-icon{
+	width: 25px;
+	filter: invert(1);
+	display: none;
+}
+
+/* -------------------- navigation -------------------- */
+
+.nav{
+	display: flex;
+	justify-content: center;
+	flex-grow: 2;
+}
+
+/* -------------------- main -------------------- */
+
+.main{
+	grid-area: main;
+}
+.main__inner{
+	width: 75%;
+	margin: 0 auto;
+}
+.main__inner-aside{
+	display: grid;
+	grid-template-areas: "ma_aside ma_main";
+	grid-template-columns: auto 1fr;
+	grid-column-gap: 20px;
+}
+.aside__content{
+	grid-area: ma_aside;
+}
+.aside__content .section{
+	position: sticky;
+	top: 105px;
+}
+.main__content{
+	grid-area: ma_main;
+}
+.section-filter-main{
+	display: none;
+}
+
+/* -------------------- forms -------------------- */
+
+.form-subscribe__input-text{
+	padding: 25px;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.1em;
+	width: 50%;
+}
+.form-subscribe__input-text:focus{
+	outline: 2px solid #333333;
+}
+.form-subscribe__btn{
+	display: inline-block;
+	margin-left: -170px !important;
+}
+
+/* -------------------- footer -------------------- */
+
+.footer{
+	grid-area: footer;
+}
+.footer__inner{
+	width: 75%;
+	margin: 0 auto 25px;
+}

@@ -1,0 +1,126 @@
+/* ------------------------------- text ------------------------------- */
+
+/* -------------------- titles -------------------- */
+
+.title{
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
+	color: #000;
+}
+.title-h1{
+	font-size: 3em;
+	margin: 30px 0;
+}
+.title-h2{
+	font-size: 1.85em;
+	margin: 30px 0;
+}
+.title-h3{
+	font-size: 1.5em;
+	margin: 25px 0;
+}
+
+/* -------------------- text -------------------- */
+
+.text{
+	margin: 1em 0;
+	font-family: Roboto, sans-serif;
+	font-size: 1.25em;
+	color: #000;
+}
+.text-md{
+	font-size: 1em;
+}
+.text-sm{
+	font-size: 1em;
+	font-weight: 300;
+	color: #222;
+}
+
+.price-wrap{
+	font-size: 1em;
+	font-weight: 400;
+	color: #333;
+}
+.price{
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: #000;
+}
+
+/* -------------------- links -------------------- */
+
+.link{
+	display: inline-block;
+	padding: 2px 5px;
+	margin: 5px 15px 5px 0;
+	font-family: Roboto, sans-serif;
+	font-size: 1.2em;
+	text-decoration: none;
+	color: #000;
+}
+.link:hover{
+	color: #ec407a;
+}
+.link:active{
+	color: #a9203e;
+}
+.link:focus{
+	outline: 2px solid #444444;
+	border-radius: 10px;
+}
+
+/* -------------------- logo -------------------- */
+
+.logo{
+	display: inline-flex;
+	align-items: center;
+	font-family: "Comic Sans MS", cursive;
+	font-size: 2em;
+}
+.logo-image{
+	border-radius: 50%;
+	width: 60px;
+}
+.logo-link{
+	margin: 0 5px;
+	text-decoration: none;
+	color: #000000;
+}
+.logo-link:hover{
+	color: #777777;
+}
+.logo-link:active{
+	color: #333333;
+}
+.logo-link:focus{
+	outline: 2px solid #333333;
+	border-radius: 10px;
+}
+
+/* ------- small size ------- */
+
+.logo-sm{
+	font-size: 1.75em;
+}
+.logo-sm .logo-image{
+	width: 40px;
+}
+
+/* ------- normal size ------- */
+
+.logo-md{
+	font-size: 2em;
+}
+.logo-md .logo-image{
+	width: 60px;
+}
+
+/* ------- large size ------- */
+
+.logo-lg{
+	font-size: 2.75em;
+}
+.logo-lg .logo-image{
+	width: 80px;
+}
