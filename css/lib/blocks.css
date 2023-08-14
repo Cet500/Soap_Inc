@@ -43,7 +43,7 @@
 	transform: scale(1.2);
 }
 .block-show:hover .price{
-	font-weight: 900;
+	font-weight: 700;
 }
 
 /* -------------------- block of advantages -------------------- */
@@ -62,7 +62,7 @@
 	margin-right: 10px;
 }
 .block-plus > p{
-	font-family: Roboto, serif;
+	font-family: Roboto, sans-serif;
 	font-size: 1.25em;
 	margin: 0.5em;
 }
