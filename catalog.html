@@ -56,29 +56,22 @@
 		<main class="main">
 			<div class="main__inner main__inner-aside">
 				<aside class="aside__content">
-					<section class="section clr-white">
+					<section class="section section-filter-aside clr-white">
 						<div class="section__inner">
 							<p class="title title-h3">Выбор мыла:</p>
 
-							<p class="text">
-								<button class="btn btn-bold btn-round btn-white btn-filter w100"
-										data-filter="*" onclick=filter(event)>Всё</button>
-							</p>
+							<button class="btn btn-bold btn-round btn-white btn-filter w100"
+									data-filter="*" onclick=filter(event)>Всё</button>
 
-							<p class="text">
-								<button class="btn btn-bold btn-round btn-white btn-filter w100"
-										data-filter="f-bears" onclick=filter(event)>Мишки</button>
-							</p>
+							<button class="btn btn-bold btn-round btn-white btn-filter w100"
+									data-filter="f-bears" onclick=filter(event)>Мишки</button>
 
-							<p class="text">
-								<button class="btn btn-bold btn-round btn-white btn-filter w100"
-										data-filter="f-puppy" onclick=filter(event)>Щенки</button>
-							</p>
+							<button class="btn btn-bold btn-round btn-white btn-filter w100"
+									data-filter="f-puppy" onclick=filter(event)>Щенки</button>
 
-							<p class="text">
-								<button class="btn btn-bold btn-round btn-white btn-filter w100"
-										data-filter="f-penguin" onclick=filter(event)>Пингвины</button>
-							</p>
+							<button class="btn btn-bold btn-round btn-white btn-filter w100"
+									data-filter="f-penguin" onclick=filter(event)>Пингвины</button>
+
 						</div>
 					</section>
 				</aside>
@@ -89,6 +82,26 @@
 							<h1 class="title title-h1">Каталог</h1>
 
 							<p class="text">Список всей нашей продукции</p>
+						</div>
+					</section>
+
+					<section class="section section-filter-main clr-white">
+						<div class="section__inner">
+							<p class="title title-h3">Выбор мыла:</p>
+
+							<div class="section__flex">
+								<button class="btn btn-bold btn-round btn-white btn-filter"
+										data-filter="*" onclick=filter(event)>Всё</button>
+
+								<button class="btn btn-bold btn-round btn-white btn-filter"
+										data-filter="f-bears" onclick=filter(event)>Мишки</button>
+
+								<button class="btn btn-bold btn-round btn-white btn-filter"
+										data-filter="f-puppy" onclick=filter(event)>Щенки</button>
+
+								<button class="btn btn-bold btn-round btn-white btn-filter"
+										data-filter="f-penguin" onclick=filter(event)>Пингвины</button>
+							</div>
 						</div>
 					</section>
 

@@ -47,6 +47,10 @@
 	font-weight: 700;
 }
 
+.btn-filter{
+	display: block;
+}
+
 /* -------------------- buttons sizes -------------------- */
 
 .btn.btn-lg{

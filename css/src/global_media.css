@@ -76,8 +76,17 @@
 	.header__inner{
 		width: 95%;
 	}
+	.aside__content .section{
+		top: 85px;
+	}
+	.main{
+		background-color: #fbf1f7;
+	}
 	.main__inner{
 		width: 100%;
+	}
+	.main__inner-aside{
+		grid-column-gap: 0;
 	}
 	.footer__inner{
 		width: 95%;
@@ -152,6 +161,16 @@
 
 @media screen and (max-width: 800px) {
 
+	.section-filter-aside{
+		display: none;
+	}
+	.section-filter-main{
+		display: block;
+	}
+	.btn-filter{
+		display: inline;
+	}
+
 	.section__flex.w60{
 		width: 85%;
 	}
@@ -188,6 +207,10 @@
 
 	.btn{
 		display: block;
+	}
+	.btn-filter{
+		padding: .5rem 1.6rem;
+		font-size: .75rem
 	}
 
 	.block{

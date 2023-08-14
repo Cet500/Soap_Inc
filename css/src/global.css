@@ -78,6 +78,9 @@
 .main__content{
 	grid-area: ma_main;
 }
+.section-filter-main{
+	display: none;
+}
 
 /* -------------------- forms -------------------- */
 
