@@ -8,11 +8,15 @@
 
 По текущему плану, это будет некий набор компонентов, из которых в дальнейшем будет сделан основной сайт?
 
-![Static Badge](https://img.shields.io/badge/version-0.0.2-blue?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/version-0.0.3-blue?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/code_name-Alice-blue?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/status-in_progress-gree?style=for-the-badge)
 
 ## История версий
+
+### 0.0.3 - Alice
+
+Созданы две новые страницы. Теперь сайт полностью "поглотил" предыдущую версию и будет развиваться дальше.
 
 ### 0.0.2 - Alice
 
