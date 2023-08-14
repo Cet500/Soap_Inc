@@ -2,7 +2,7 @@
 
 /* -------------------- body -------------------- */
 
-.global__body{
+.body{
 	display: grid;
 	grid-template-areas: "header"
 						 "main"
@@ -28,6 +28,17 @@
 	align-items: center;
 	width: 75%;
 	margin: 5px auto;
+}
+.header__tel{
+
+}
+.header__tel-text{
+
+}
+.header__tel-icon{
+	width: 25px;
+	filter: invert(1);
+	display: none;
 }
 
 /* -------------------- navigation -------------------- */
@@ -59,6 +70,10 @@
 }
 .form-subscribe__input-text:focus{
 	outline: 2px solid #333333;
+}
+.form-subscribe__btn{
+	display: inline-block;
+	margin-left: -170px !important;
 }
 
 /* -------------------- footer -------------------- */

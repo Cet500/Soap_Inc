@@ -7,20 +7,23 @@
 
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+		<!-- import main styles -->
 		<link rel="stylesheet" href="css/src/global.css">
-
+		<!-- import lib styles -->
 		<link rel="stylesheet" href="css/lib/blocks.css">
 		<link rel="stylesheet" href="css/lib/buttons.css">
 		<link rel="stylesheet" href="css/lib/text.css">
-
+		<!-- import sub-lib styles -->
 		<link rel="stylesheet" href="css/lib/colors.css">
 		<link rel="stylesheet" href="css/lib/sizes.css">
+		<!-- import media styles -->
+		<link rel="stylesheet" href="css/src/global_media.css">
 	</head>
 
-	<body class="global__body">
+	<body class="body">
 		<header class="header">
 			<div class="header__inner">
-				<div class="logo logo-md">
+				<div class="header__logo logo logo-md">
 					<img class="logo-image" src="img/logo.png" alt="logo">
 
 					<a class="logo-link" href="index.html">
@@ -34,7 +37,10 @@
 					<a class="link" href="contacts.html">Контакты</a>
 				</nav>
 
-				<a class="btn btn-md btn-round btn-bold btn-pink" href="#">8 (800) 555-35-35</a>
+				<a class="header__tel btn btn-md btn-round btn-bold btn-pink" href="#">
+					<span class="header__tel-text">8 (800) 555-35-35</span>
+					<img class="header__tel-icon" src="img/icons/tel.svg" alt="logo">
+				</a>
 			</div>
 		</header>
 
@@ -142,9 +148,7 @@
 
 								<img src="img/photos/heart.png" alt="сердце">
 							</div>
-						</div>
 
-						<div class="section__flex w100">
 							<div class="block block-show clr-purple">
 								<h3 class="title title-h3">
 									Волшебные амулеты
@@ -163,16 +167,6 @@
 								<p class="text text-md">Все же любят щенят?</p>
 
 								<img src="img/photos/puppy_blue.png" alt="щенок">
-							</div>
-
-							<div class="block block-show clr-purple">
-								<h3 class="title title-h3">
-									Пингвин
-								</h3>
-
-								<p class="text text-md">Киндер пингви я люблю...</p>
-
-								<img src="img/photos/penguin.png" alt="пингвин">
 							</div>
 
 							<div class="block block-show clr-purple">
@@ -232,6 +226,26 @@
 
 								<p class="text price-wrap">от <span class="price">10 000 ₽</span> / 1 шт</p>
 							</div>
+
+							<div class="block block-show clr-pink">
+								<img src="img/photos/bears.png" alt="мишки">
+
+								<h3 class="title title-h3">
+									Мишки
+								</h3>
+
+								<p class="text price-wrap">от <span class="price">10 000 ₽</span> / 1 шт</p>
+							</div>
+
+							<div class="block block-show clr-pink">
+								<img src="img/photos/bears.png" alt="мишки">
+
+								<h3 class="title title-h3">
+									Мишки
+								</h3>
+
+								<p class="text price-wrap">от <span class="price">10 000 ₽</span> / 1 шт</p>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -244,8 +258,9 @@
 							<label for="email"></label>
 							<input class="form-subscribe__input-text"
 								   type="email" id="email" name="email" placeholder="email" required>
-							<button class="btn btn-md btn-pink btn-round btn-bold" type="submit"
-									style="margin-left: -170px;">Подписаться</button>
+							<button class="form-subscribe__btn btn btn-md btn-pink btn-round btn-bold" type="submit">
+								Подписаться
+							</button>
 						</form>
 					</div>
 				</section>

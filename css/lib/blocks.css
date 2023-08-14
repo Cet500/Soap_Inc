@@ -25,8 +25,7 @@
 /* -------------------- inner blocks -------------------- */
 
 .block{
-	min-width: 20%;
-	flex-basis: 20%;
+	flex-basis: 27%;
 	flex-grow: 1;
 	flex-shrink: 1;
 	margin: 10px;
@@ -76,7 +75,6 @@
                          "bf_text bf_text bf_text";
 	grid-template-rows: 70px 1fr;
 	grid-template-columns: 70px 1fr auto;
-	flex-basis: 27%;
 	padding: 15px 15px 10px;
 	background-color: #e1c1f4;
 }
@@ -103,6 +101,7 @@
 
 .block-footer{
 	display: grid;
+	grid-template-areas: "bf_col1 bf_col2 bf_col3 bf_col4";
 	grid-template-rows: 1fr;
 	grid-template-columns: 1fr 0.6fr 0.6fr 0.7fr;
 	grid-column-gap: 20px;
@@ -110,6 +109,19 @@
 	border-radius: 30px;
 	border: 2px solid #e1c1f4;
 }
+.block-footer :nth-child(1){
+	grid-area: bf_col1;
+}
+.block-footer :nth-child(2){
+	grid-area: bf_col2;
+}
+.block-footer :nth-child(3){
+	grid-area: bf_col3;
+}
+.block-footer :nth-child(4){
+	grid-area: bf_col4;
+}
+
 .block-footer__col{
 	display: flex;
 	flex-direction: column;
