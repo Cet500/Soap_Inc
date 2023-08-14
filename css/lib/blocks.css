@@ -50,7 +50,7 @@
 
 .block-plus{
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	margin: 10px;
 	flex-basis: 45%;
