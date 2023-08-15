@@ -1,7 +1,5 @@
 /* ------------------------------- media ------------------------------- */
 
-/*TODO: Дописать медиа-запросы*/
-
 /* -------------------- 1500 - 1700 -------------------- */
 
 @media screen and (max-width: 1700px) {
@@ -99,6 +97,13 @@
 		margin: 0;
 		padding: 20px 0;
 		border-radius: 0;
+	}
+
+	.section-aside-name{
+		height: 100%;
+		border-top-right-radius: 35px;
+		border-bottom-right-radius: 35px;
+		padding: 0;
 	}
 
 	.block-plus{
@@ -227,6 +232,15 @@
 	}
 	.block-show .price{
 		font-weight: 700;
+	}
+
+	.section-aside-name .section__inner{
+		padding: 10px 10px;
+
+	}
+	.section-aside-name h2{
+		writing-mode: vertical-lr;
+		text-orientation: upright;
 	}
 
 	.form-subscribe__input-text{

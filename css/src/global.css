@@ -71,7 +71,7 @@
 .aside__content{
 	grid-area: ma_aside;
 }
-.aside__content .section{
+.aside__content-sticky .section{
 	position: sticky;
 	top: 105px;
 }

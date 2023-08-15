@@ -48,6 +48,11 @@
 	color: #000;
 }
 
+.monospace{
+	font-family: Consolas, monospace;
+	white-space: pre;
+}
+
 /* -------------------- links -------------------- */
 
 .link{
