@@ -1,0 +1,32 @@
+/* ------------------------------- tables ------------------------------- */
+
+/* -------------------- base -------------------- */
+
+.table{
+	font-family: Roboto, sans-serif;
+	border-collapse: collapse;
+}
+
+/* -------------------- types -------------------- */
+
+.table-light tr{
+	border-top: 1px solid #999999;
+}
+.table-light :first-child{
+	border-top: none;
+}
+
+/* -------------------- sizes -------------------- */
+
+.table-md{
+	font-size: 1.1em;
+}
+.table-md td{
+	padding: 7px 15px 7px 0;
+}
+
+/* -------------------- effects -------------------- */
+
+.table-hover tr:hover{
+	background-color: rgba(0,0,0, 0.1);
+}
