@@ -33,16 +33,15 @@
 	width: 75%;
 	margin: 5px auto;
 }
-.header__tel{
+.header__cart{
+	display: flex;
+	align-items: center;
+}
+.header__cart-text{
 
 }
-.header__tel-text{
-
-}
-.header__tel-icon{
-	width: 25px;
-	filter: invert(1);
-	display: none;
+.header__cart-icon{
+	width: 35px;
 }
 
 /* -------------------- navigation -------------------- */

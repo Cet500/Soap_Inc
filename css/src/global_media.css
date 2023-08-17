@@ -137,13 +137,6 @@
 		width: 60px;
 	}
 
-	.header__tel-text{
-		display: none;
-	}
-	.header__tel-icon{
-		display: block;
-	}
-
 	.section__flex.w60{
 		width: 75%;
 	}
@@ -193,6 +186,14 @@
 
 @media screen and (max-width: 600px) {
 
+	.btn{
+		display: block;
+	}
+	.btn-block{
+		padding: .5rem 1.6rem;
+		font-size: .75rem
+	}
+
 	.header__inner{
 		display: grid;
 		grid-template-areas: "hi_logo hi_tel"
@@ -203,19 +204,12 @@
 	.header__logo{
 		grid-area: hi_logo;
 	}
-	.header__tel{
+	.header__cart{
 		grid-area: hi_tel;
+		display: flex;
 	}
 	.nav{
 		grid-area: hi_nav;
-	}
-
-	.btn{
-		display: block;
-	}
-	.btn-block{
-		padding: .5rem 1.6rem;
-		font-size: .75rem
 	}
 
 	.block{
