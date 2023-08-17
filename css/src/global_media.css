@@ -172,7 +172,7 @@
 	.section-filter-main{
 		display: block;
 	}
-	.btn-filter{
+	.btn-block{
 		display: inline;
 	}
 
@@ -213,7 +213,7 @@
 	.btn{
 		display: block;
 	}
-	.btn-filter{
+	.btn-block{
 		padding: .5rem 1.6rem;
 		font-size: .75rem
 	}
