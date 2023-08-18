@@ -27,6 +27,12 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap"
 			  rel="stylesheet">
+
+		<!-- import jquery -->
+		<script src="js/ext/jquery-3.7.0.min.js" defer></script>
+		<script src="js/ext/jquery.storage.js" defer></script>
+		<!-- import scripts -->
+		<script src="js/src/cart.js" defer></script>
 	</head>
 
 	<body class="body">
@@ -48,7 +54,7 @@
 
 				<a class="header__cart btn btn-mc btn-round btn-bold btn-pink" href="cart.html">
 					<img class="header__cart-icon" src="img/icons/cart.svg" alt="svg icon tel" aria-disabled="true">
-					<span class="header__cart-text"> (<span class="header__cart-value">0</span> ₽)</span>
+					<span class="header__cart-text"> (<span class="header__cart-value scripts__soap-cost">0</span> ₽)</span>
 				</a>
 			</div>
 		</header>
@@ -119,12 +125,20 @@
 
 									<p class="text">
 										<a class="btn btn-sm btn-round btn-bold btn-white"
-										   href="#">
+										   href="info-bear.html">
 											Инфо</a>
 
-										<a class="btn btn-sm btn-round btn-bold btn-pink"
-										   href="#">
-											Купить</a>
+										<a class="btn btn-sm btn-round btn-bold btn-pink btn-inline-block hidden"
+										   href="cart.html">
+											Взято</a>
+
+										<button class="btn btn-sm btn-round btn-bold btn-pink"
+												onclick="buySoap(this)"
+												data-soap-id="1" data-soap-price="500" data-soap-type="BEAR"
+												data-soap-name="Мишка" data-soap-image="bears"
+												data-soap-color="зелёный" data-soap-aroma="лайм">
+											Купить
+										</button>
 									</p>
 								</div>
 
@@ -139,12 +153,20 @@
 
 									<p class="text">
 										<a class="btn btn-sm btn-round btn-bold btn-white"
-										   href="#">
+										   href="info-puppy.html">
 											Инфо</a>
 
-										<a class="btn btn-sm btn-round btn-bold btn-pink"
-										   href="#">
-											Купить</a>
+										<a class="btn btn-sm btn-round btn-bold btn-pink btn-inline-block hidden"
+										   href="cart.html">
+											Взято</a>
+
+										<button class="btn btn-sm btn-round btn-bold btn-pink"
+												onclick="buySoap(this)"
+												data-soap-id="2" data-soap-price="1000" data-soap-type="PUPPY"
+												data-soap-name="Щенок" data-soap-image="puppy_azure"
+												data-soap-color="лазурь" data-soap-aroma="океан">
+											Купить
+										</button>
 									</p>
 								</div>
 
@@ -159,132 +181,20 @@
 
 									<p class="text">
 										<a class="btn btn-sm btn-round btn-bold btn-white"
-										   href="#">
+										   href="info-penguin.html">
 											Инфо</a>
 
-										<a class="btn btn-sm btn-round btn-bold btn-pink"
-										   href="#">
-											Купить</a>
-									</p>
-								</div>
+										<a class="btn btn-sm btn-round btn-bold btn-pink btn-inline-block hidden"
+										   href="cart.html">
+											Взято</a>
 
-								<div class="block block-show clr-pink f-bears">
-									<img src="img/photos/bears.png" alt="мишки">
-
-									<h3 class="title title-h3">
-										Мишки
-									</h3>
-
-									<p class="text price-wrap">от <span class="price">500 ₽</span> / 1 шт</p>
-
-									<p class="text">
-										<a class="btn btn-sm btn-round btn-bold btn-white"
-										   href="#">
-											Инфо</a>
-
-										<a class="btn btn-sm btn-round btn-bold btn-pink"
-										   href="#">
-											Купить</a>
-									</p>
-								</div>
-
-								<div class="block block-show clr-pink f-puppy">
-									<img src="img/photos/puppy_blue.png" alt="щенок">
-
-									<h3 class="title title-h3">
-										Щеночки
-									</h3>
-
-									<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
-
-									<p class="text">
-										<a class="btn btn-sm btn-round btn-bold btn-white"
-										   href="#">
-											Инфо</a>
-
-										<a class="btn btn-sm btn-round btn-bold btn-pink"
-										   href="#">
-											Купить</a>
-									</p>
-								</div>
-
-								<div class="block block-show clr-pink f-penguin">
-									<img src="img/photos/penguin.png" alt="пингвин">
-
-									<h3 class="title title-h3">
-										Пингвины
-									</h3>
-
-									<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
-
-									<p class="text">
-										<a class="btn btn-sm btn-round btn-bold btn-white"
-										   href="#">
-											Инфо</a>
-
-										<a class="btn btn-sm btn-round btn-bold btn-pink"
-										   href="#">
-											Купить</a>
-									</p>
-								</div>
-
-								<div class="block block-show clr-pink f-bears">
-									<img src="img/photos/bears.png" alt="мишки">
-
-									<h3 class="title title-h3">
-										Мишки
-									</h3>
-
-									<p class="text price-wrap">от <span class="price">500 ₽</span> / 1 шт</p>
-
-									<p class="text">
-										<a class="btn btn-sm btn-round btn-bold btn-white"
-										   href="#">
-											Инфо</a>
-
-										<a class="btn btn-sm btn-round btn-bold btn-pink"
-										   href="#">
-											Купить</a>
-									</p>
-								</div>
-
-								<div class="block block-show clr-pink f-puppy">
-									<img src="img/photos/puppy_blue.png" alt="щенок">
-
-									<h3 class="title title-h3">
-										Щеночки
-									</h3>
-
-									<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
-
-									<p class="text">
-										<a class="btn btn-sm btn-round btn-bold btn-white"
-										   href="#">
-											Инфо</a>
-
-										<a class="btn btn-sm btn-round btn-bold btn-pink"
-										   href="#">
-											Купить</a>
-									</p>
-								</div>
-
-								<div class="block block-show clr-pink f-penguin">
-									<img src="img/photos/penguin.png" alt="пингвин">
-
-									<h3 class="title title-h3">
-										Пингвины
-									</h3>
-
-									<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
-
-									<p class="text">
-										<a class="btn btn-sm btn-round btn-bold btn-white"
-										   href="#">
-											Инфо</a>
-
-										<a class="btn btn-sm btn-round btn-bold btn-pink"
-										   href="#">
-											Купить</a>
+										<button class="btn btn-sm btn-round btn-bold btn-pink"
+												onclick="buySoap(this)"
+												data-soap-id="3" data-soap-price="1000" data-soap-type="PENGUIN"
+												data-soap-name="Пингвин" data-soap-image="penguin"
+												data-soap-color="чёрный" data-soap-aroma="океан">
+											Купить
+										</button>
 									</p>
 								</div>
 							</div>

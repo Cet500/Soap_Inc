@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="css/lib/blocks.css">
 		<link rel="stylesheet" href="css/lib/buttons.css">
 		<link rel="stylesheet" href="css/lib/text.css">
+		<link rel="stylesheet" href="css/lib/tables.css">
 		<!-- import sub-lib styles -->
 		<link rel="stylesheet" href="css/lib/colors.css">
 		<link rel="stylesheet" href="css/lib/sizes.css">
@@ -27,6 +28,14 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap"
 			  rel="stylesheet">
+
+		<!-- import jquery -->
+		<script src="js/ext/jquery-3.7.0.min.js" defer></script>
+		<script src="js/ext/jsrender.min.js"     defer></script>
+		<script src="js/ext/jquery.storage.js"   defer></script>
+		<!-- import scripts -->
+		<script src="js/src/cart.js"     defer></script>
+		<script src="js/src/cars-csr.js" defer></script>
 	</head>
 
 	<body class="body">
@@ -48,7 +57,7 @@
 
 				<a class="header__cart btn btn-mc btn-round btn-bold btn-pink" href="cart.html">
 					<img class="header__cart-icon" src="img/icons/cart.svg" alt="svg icon tel" aria-disabled="true">
-					<span class="header__cart-text"> (<span class="header__cart-value">0</span> ₽)</span>
+					<span class="header__cart-text"> (<span class="header__cart-value scripts__soap-cost">0</span> ₽)</span>
 				</a>
 			</div>
 		</header>
@@ -64,11 +73,19 @@
 				</section>
 
 				<section class="section clr-white">
-					<div class="section__inner"></div>
+					<div class="section__inner">
+						<table class="table table-light table-hover table-md w60">
+							<tbody id="script__cart-table">
+
+							</tbody>
+						</table>
+					</div>
 				</section>
 
 				<section class="section clr-purple">
 					<div class="section__inner">
+						<p class="title title-h3 ">Итого: <span class="scripts__soap-cost">0</span> ₽</p>
+
 						<p>
 							<button class="btn btn-lg btn-round btn-bold btn-pink">Оформить заказ</button>
 						</p>
@@ -76,6 +93,27 @@
 				</section>
 			</div>
 		</main>
+
+		<script id="script__cart-table-template" type="text/html">
+			<tr>
+				<td>
+					<img src="img/photos/{{:image}}.png" alt="{{:name}}" height="150">
+				</td>
+				<td>
+					<h3 class="title title-h4">{{:name}}</h3>
+					<p class="text text-md">Цвет: {{:color}}</p>
+					<p class="text text-md">Аромат: {{:aroma}}</p>
+					<p class="text price-wrap">Цена: <span class="price">{{:price}} ₽</span> </p>
+				</td>
+				<td>
+					<button class="btn btn-bold btn-round btn-white"
+							data-soap-id="{{:id}}" onclick="setLessSoap(this)">-</button>
+					<span class="title title-h4">{{:count}}</span>
+					<button class="btn btn-bold btn-round btn-pink"
+							data-soap-id="{{:id}}" onclick="setMoreSoap(this)">+</button>
+				</td>
+			</tr>
+		</script>
 
 		<footer class="footer">
 			<div class="footer__inner">
