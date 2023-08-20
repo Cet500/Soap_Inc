@@ -53,7 +53,7 @@
 }
 
 .monospace{
-	font-family: Consolas, monospace;
+	font-family: "Noto Sans Mono", monospace;
 	white-space: pre;
 }
 
@@ -90,8 +90,9 @@
 .logo{
 	display: inline-flex;
 	align-items: center;
-	font-family: "Comic Sans MS", cursive;
+	font-family: "Roboto", cursive;
 	font-size: 2em;
+	font-style: italic;
 }
 .logo-image{
 	border-radius: 50%;

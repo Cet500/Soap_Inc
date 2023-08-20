@@ -212,7 +212,14 @@
 		grid-area: hi_nav;
 	}
 
+	.section__inner{
+		padding: 20px 15px;
+	}
+	.section__flex{
+		margin: 0;
+	}
 	.block{
+		margin: 10px 0;
 		flex-basis: 100%;
 	}
 	.section__flex.w60{

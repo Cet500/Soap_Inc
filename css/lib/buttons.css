@@ -3,7 +3,7 @@
 /* -------------------- buttons base -------------------- */
 
 .btn{
-	font-family: Consolas, monospace;
+	font-family: "Noto Sans Mono", monospace;
 	margin: .375rem;
 	color: inherit;
 	text-transform: uppercase;
@@ -44,7 +44,7 @@
 .btn-bold{
 	white-space: nowrap;
 	font-size: 1rem !important;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .btn-block{
