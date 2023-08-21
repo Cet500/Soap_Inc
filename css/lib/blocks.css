@@ -1,6 +1,6 @@
-/* ------------------------------- blocks ------------------------------- */
+/* -------------------------- sections and blocks --------------------------- */
 
-/* -------------------- sections -------------------- */
+/* -------------------- section base -------------------- */
 
 .section{
 	margin: 35px 0;
@@ -8,12 +8,14 @@
 	border-radius: 30px;
 }
 .section-border{
-	border: 3px solid #deb9f5;
+	border: 3px solid var(--color-purple);
 }
-
 .section__inner{
 	padding: 25px 35px;
 }
+
+/* -------------------- section types ------------------- */
+
 .section__flex{
 	display: flex;
 	flex-flow: row wrap;
@@ -33,7 +35,7 @@
 	border-radius: 20px;
 }
 
-/* -------------------- block of showcase -------------------- */
+/* ------------------ block of showcase ----------------- */
 
 .block-show > img{
 	width: 100%;
@@ -46,7 +48,7 @@
 	font-weight: 700;
 }
 
-/* -------------------- block of advantages -------------------- */
+/* ---------------- block of advantages ----------------- */
 
 .block-plus{
 	display: flex;
@@ -67,7 +69,7 @@
 	margin: 0.5em;
 }
 
-/* -------------------- block of feedback -------------------- */
+/* ----------------- block of feedback ------------------ */
 
 .block-feedback{
 	display: grid;
@@ -76,7 +78,7 @@
 	grid-template-rows: 70px 1fr;
 	grid-template-columns: 70px 1fr auto;
 	padding: 15px 15px 10px;
-	background-color: #e1c1f4;
+	background-color: var(--color-purple);
 }
 .block-feedback__ava{
 	grid-area: bf_ava;
@@ -97,7 +99,7 @@
 	grid-area: bf_text;
 }
 
-/* -------------------- block of footer -------------------- */
+/* ------------------ block of footer ------------------- */
 
 .block-footer{
 	display: grid;

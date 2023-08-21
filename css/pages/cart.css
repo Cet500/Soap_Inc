@@ -1,0 +1,36 @@
+/* -------------------------------- cart page ------------------------------- */
+
+/* ------------------------ blocks ---------------------- */
+
+.cart__block{
+
+}
+.cart__block :last-child{
+	border: none;
+}
+.cart__block__row{
+	display: grid;
+	grid-template-areas: "cbr_icon cbr_info cbr_btns";
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--color-lightgray);
+}
+.cart__block__row-icon{
+	grid-area: cbr_icon;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+}
+.cart__block__row-icon img{
+	height: 150px;
+}
+.cart__block__row-info{
+	grid-area: cbr_info;
+}
+.cart__block__row-btns{
+	grid-area: cbr_btns;
+	display: flex;
+	align-items: center;
+}
+

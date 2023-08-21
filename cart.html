@@ -10,6 +10,8 @@
 
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+		<!-- import global vars -->
+		<link rel="stylesheet" href="css/src/global_vars.css">
 		<!-- import lib styles -->
 		<link rel="stylesheet" href="css/lib/blocks.css">
 		<link rel="stylesheet" href="css/lib/buttons.css">
@@ -20,6 +22,7 @@
 		<link rel="stylesheet" href="css/lib/sizes.css">
 		<!-- import main styles -->
 		<link rel="stylesheet" href="css/src/global.css">
+		<link rel="stylesheet" href="css/pages/cart.css">
 		<!-- import media styles -->
 		<link rel="stylesheet" href="css/src/global_media.css">
 
@@ -63,7 +66,7 @@
 
 		<main class="main">
 			<div class="main__inner">
-				<section class="section clr-white">
+				<section class="section clr-light">
 					<div class="section__inner">
 						<h1 class="title title-h1">Корзина</h1>
 
@@ -71,13 +74,11 @@
 					</div>
 				</section>
 
-				<section class="section clr-white">
+				<section class="section clr-light">
 					<div class="section__inner">
-						<table class="table table-light table-hover table-md w60">
-							<tbody id="script__cart-table">
+						<div class="cart__block" id="script__cart">
 
-							</tbody>
-						</table>
+						</div>
 					</div>
 				</section>
 
@@ -85,33 +86,33 @@
 					<div class="section__inner">
 						<p class="title title-h3 ">Итого: <span class="scripts__soap-cost">0</span> ₽</p>
 
-						<p>
+						<div>
 							<button class="btn btn-lg btn-round btn-bold btn-pink">Оформить заказ</button>
-						</p>
+						</div>
 					</div>
 				</section>
 			</div>
 		</main>
 
-		<script id="script__cart-table-template" type="text/html">
-			<tr>
-				<td>
-					<img src="img/photos/{{:image}}.png" alt="{{:name}}" height="150">
-				</td>
-				<td>
+		<script id="script__cart-template" type="text/html">
+			<div class="cart__block__row">
+				<div class="cart__block__row-icon">
+					<img src="img/photos/{{:image}}.png" alt="{{:name}}">
+				</div>
+				<div class="cart__block__row-info">
 					<h3 class="title title-h4">{{:name}}</h3>
 					<p class="text text-md">Цвет: {{:color}}</p>
 					<p class="text text-md">Аромат: {{:aroma}}</p>
 					<p class="text price-wrap">Цена: <span class="price">{{:price}} ₽</span> </p>
-				</td>
-				<td>
+				</div>
+				<div class="cart__block__row-btns">
 					<button class="btn btn-bold btn-round btn-white"
 							data-soap-id="{{:id}}" onclick="setLessSoap(this)">-</button>
 					<span class="title title-h4">{{:count}}</span>
 					<button class="btn btn-bold btn-round btn-pink"
 							data-soap-id="{{:id}}" onclick="setMoreSoap(this)">+</button>
-				</td>
-			</tr>
+				</div>
+			</div>
 		</script>
 
 		<footer class="footer">

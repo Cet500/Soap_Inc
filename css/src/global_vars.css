@@ -1,0 +1,24 @@
+/* ----------------------------- global colors ------------------------------ */
+
+/* --------------------- root colors -------------------- */
+
+:root{
+	/* monochrome */
+	--color-white:		#ffffff;
+	--color-lightgray:  #808080;
+	--color-gray:       #666666;
+	--color-darkgray:	#333333;
+	--color-black: 		#000000;
+
+	/* accents */
+	--color-light:	  #fbf1f7;
+	--color-pink:	  #ffbdd3;
+	--color-darkpink: #ec407a;
+	--color-purple:	  #e1c1f4;
+
+	/* links */
+	--color-link:		 #000000;
+	--color-link-hover:	 #ec407a;
+	--color-link-active: #a9203e;
+	--color-link-focus:  #333333;
+}

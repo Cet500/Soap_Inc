@@ -10,6 +10,8 @@
 
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+		<!-- import global vars -->
+		<link rel="stylesheet" href="css/src/global_vars.css">
 		<!-- import lib styles -->
 		<link rel="stylesheet" href="css/lib/blocks.css">
 		<link rel="stylesheet" href="css/lib/buttons.css">
@@ -61,20 +63,20 @@
 		<main class="main">
 			<div class="main__inner main__inner-aside">
 				<aside class="aside__content aside__content-sticky">
-					<section class="section section-filter-aside clr-white">
+					<section class="section section-filter-aside clr-light">
 						<div class="section__inner">
 							<p class="title title-h3">Выбор мыла:</p>
 
-							<button class="btn btn-bold btn-round btn-white btn-block w100"
+							<button class="btn btn-bold btn-round btn-white block w100"
 									data-filter="*" onclick=filter(event)>Всё</button>
 
-							<button class="btn btn-bold btn-round btn-white btn-block w100"
+							<button class="btn btn-bold btn-round btn-white block w100"
 									data-filter="f-bears" onclick=filter(event)>Мишки</button>
 
-							<button class="btn btn-bold btn-round btn-white btn-block w100"
+							<button class="btn btn-bold btn-round btn-white block w100"
 									data-filter="f-puppy" onclick=filter(event)>Щенки</button>
 
-							<button class="btn btn-bold btn-round btn-white btn-block w100"
+							<button class="btn btn-bold btn-round btn-white block w100"
 									data-filter="f-penguin" onclick=filter(event)>Пингвины</button>
 
 						</div>
@@ -82,7 +84,7 @@
 				</aside>
 
 				<div class="main__content">
-					<section class="section clr-white">
+					<section class="section clr-light">
 						<div class="section__inner">
 							<h1 class="title title-h1">Каталог</h1>
 
@@ -90,27 +92,27 @@
 						</div>
 					</section>
 
-					<section class="section section-filter-main clr-white">
+					<section class="section section-filter-main clr-light">
 						<div class="section__inner">
 							<p class="title title-h3">Выбор мыла:</p>
 
 							<div class="section__flex">
-								<button class="btn btn-bold btn-round btn-white btn-block"
+								<button class="btn btn-bold btn-round btn-white block"
 										data-filter="*" onclick=filter(event)>Всё</button>
 
-								<button class="btn btn-bold btn-round btn-white btn-block"
+								<button class="btn btn-bold btn-round btn-white block"
 										data-filter="f-bears" onclick=filter(event)>Мишки</button>
 
-								<button class="btn btn-bold btn-round btn-white btn-block"
+								<button class="btn btn-bold btn-round btn-white block"
 										data-filter="f-puppy" onclick=filter(event)>Щенки</button>
 
-								<button class="btn btn-bold btn-round btn-white btn-block"
+								<button class="btn btn-bold btn-round btn-white block"
 										data-filter="f-penguin" onclick=filter(event)>Пингвины</button>
 							</div>
 						</div>
 					</section>
 
-					<section class="section clr-white">
+					<section class="section clr-light">
 						<div class="section__inner">
 							<div class="section__flex section__filter w100">
 								<div class="block block-show clr-pink f-bears">
@@ -123,11 +125,11 @@
 									<p class="text price-wrap">от <span class="price">500 ₽</span> / 1 шт</p>
 
 									<p class="text">
-										<a class="btn btn-sm btn-round btn-bold btn-white"
+										<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
 										   href="info-bear.html">
 											Инфо</a>
 
-										<a class="btn btn-sm btn-round btn-bold btn-pink btn-inline-block hidden"
+										<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
 										   href="cart.html">
 											Взято (1)</a>
 
@@ -151,11 +153,11 @@
 									<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
 
 									<p class="text">
-										<a class="btn btn-sm btn-round btn-bold btn-white"
+										<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
 										   href="info-puppy.html">
 											Инфо</a>
 
-										<a class="btn btn-sm btn-round btn-bold btn-pink btn-inline-block hidden"
+										<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
 										   href="cart.html">
 											Взято (1)</a>
 
@@ -179,15 +181,15 @@
 									<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
 
 									<p class="text">
-										<a class="btn btn-sm btn-round btn-bold btn-white"
+										<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
 										   href="info-penguin.html">
 											Инфо</a>
 
-										<a class="btn btn-sm btn-round btn-bold btn-pink btn-inline-block hidden"
+										<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
 										   href="cart.html">
 											Взято (1)</a>
 
-										<button class="btn btn-sm btn-round btn-bold btn-pink"
+										<button class="btn btn-sm btn-round btn-bold btn-pink inline-block"
 												onclick="buySoap(this)"
 												data-soap-id="3" data-soap-price="1000" data-soap-type="PENGUIN"
 												data-soap-name="Пингвин" data-soap-image="penguin"

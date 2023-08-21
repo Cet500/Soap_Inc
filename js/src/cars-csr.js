@@ -5,7 +5,7 @@
 //
 $(document).ready( function () {
 
-	var tmpl = $.templates("#script__cart-table-template");
+	var tmpl = $.templates("#script__cart-template");
 	var data = []
 
 	array.forEach(function toggleButtons(el) {
@@ -21,6 +21,6 @@ $(document).ready( function () {
 	})
 
 	var html = tmpl.render(data);
-	$("#script__cart-table").html(html);
+	$("#script__cart").html(html);
 
 });
