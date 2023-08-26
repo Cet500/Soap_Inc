@@ -10,7 +10,8 @@ $(document).ready( function () {
 
 	array = $.localStorage( "soap" )
 	array.forEach(function toggleButtons(el) {
-		$('button[data-soap-id='+el[0]+']').toggleClass("hidden").prev().html("Взято ("+el[7]+")").toggleClass("hidden");
+		$('button[data-soap-id=' + el[0] + ']').toggleClass("hidden")
+			.prev().html("Взято (" + el[7] + ")").toggleClass("hidden");
 	})
 
 });
@@ -47,26 +48,26 @@ function buySoap(el) {
 // Если нет, то инициализирует его.
 // Вызывается лишь раз при загрузке каждой страницы.
 //
-function checkLS(item, init_value) {
+function checkLS(ls_item, ls_init_value) {
 
-	if (localStorage.getItem(item) === null) {
-		$.localStorage( item, init_value );
+	if (localStorage.getItem(ls_item) === null) {
+		$.localStorage( ls_item, ls_init_value );
 	}
 
 }
 
 //
-// Посчитывает стоимость товаров, записанных в корзину ( LocalStorage ).
+// Посчитывает стоимость товаров, записанных в корзину (LocalStorage).
 // Затем выводит эти данные на страницу.
 // Вызывается при загрузке страницы, а также при каждом изменении корзины.
 //
 function setSoapCost() {
 
-	array = $.localStorage( "soap" )
+	ls_soap = $.localStorage( "soap" )
 
-	var cart_value = 0;
+	let cart_value = 0;
 
-	array.forEach(function summary(el) {
+	ls_soap.forEach(function summary(el) {
 		cart_value += (el[3] * el[7]);
 	})
 
@@ -75,40 +76,65 @@ function setSoapCost() {
 }
 
 //
-// Уменьшает количество товара в коризине на единицу
+// Уменьшает количество товара в корзине на единицу
 //
 function setLessSoap(el) {
-	var temp = $(el).next().html();
-	temp = Number(temp) - 1;
-	$(el).next().html( temp );
 
-	array = $.localStorage( "soap" )
-	array.forEach(function toggleCount(arr) {
-		if ( arr[0] === Number($(el).data("soapId")) ) {
-			arr[7] = temp;
-			console.log( temp )
+	let ls_soap = $.localStorage( "soap" );
+	let soap_id = Number($(el).data("soapId") );
+	let value = Number( $(el).next().html() );
+	value = value - 1;
+
+	if ( value <= 0 ) {
+
+		for (let i = 0; i < ls_soap.length; i++) {
+			if ( ls_soap[i][0] === soap_id ) {
+				ls_soap.splice(i, 1);
+			}
 		}
-	})
-	$.localStorage( "soap", array );
+
+		$(el).parent().parent().remove();
+
+	}
+	else {
+
+		ls_soap.forEach(function (arr) {
+			if ( arr[0] === soap_id ) {
+				arr[7] = value;
+			}
+		})
+
+		$(el).next().html( value );
+
+	}
+
+	$.localStorage( "soap", ls_soap );
 
 	setSoapCost();
+
 }
 
 //
-// Увеличивает количество товара в коризине на единицу
+// Увеличивает количество товара в корзине на единицу
 //
 function setMoreSoap(el) {
-	var temp = $(el).prev().html();
-	temp = Number(temp) + 1;
-	$(el).prev().html( temp );
 
-	array = $.localStorage( "soap" )
-	array.forEach(function toggleCount(arr) {
-		if ( arr[0] === Number($(el).data("soapId")) ) {
-			arr[7] = temp;
+	let ls_soap = $.localStorage( "soap" );
+	let soap_id = Number($(el).data("soapId") );
+	let value = Number( $(el).prev().html() );
+	value = value + 1;
+
+	ls_soap.forEach(function (arr) {
+		if ( arr[0] === soap_id ) {
+			arr[7] = value;
 		}
 	})
-	$.localStorage( "soap", array );
+
+	$(el).prev().html( value );
+
+	$.localStorage( "soap", ls_soap );
 
 	setSoapCost();
+
+
 }
