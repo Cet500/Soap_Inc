@@ -49,6 +49,20 @@
 	font-size: 1.4em;
 }
 
+/* ------------------------ tags ------------------------ */
+
+.tags-list{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+.tags-list li{
+	margin: 5px;
+	padding: 5px 8px;
+	border-radius: 7px;
+	background-color: var(--color-purple);
+}
+
 /* ------------------------ price ----------------------- */
 
 .price-wrap{

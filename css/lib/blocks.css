@@ -24,10 +24,17 @@
 	margin-right: -10px;
 }
 
+.no-grow{
+	justify-content: flex-start;
+}
+.no-grow .block{
+	flex-grow: 0;
+}
+
 /* -------------------- inner blocks -------------------- */
 
 .block{
-	flex-basis: 27%;
+	flex-basis: calc( calc( 100% - 180px ) / 3 );
 	flex-grow: 1;
 	flex-shrink: 1;
 	margin: 10px;

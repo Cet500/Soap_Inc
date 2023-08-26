@@ -132,7 +132,7 @@
 	}
 
 	.block{
-		flex-basis: 26%;
+		flex-basis: calc( calc( 100% - 120px ) / 2 );
 	}
 
 	.form-subscribe__input-text{
