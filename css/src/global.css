@@ -1,6 +1,6 @@
-/* ------------------------------- global ------------------------------- */
+/* --------------------------------- global --------------------------------- */
 
-/* -------------------- body -------------------- */
+/* ------------------------ body ------------------------ */
 
 .body{
 	display: grid;
@@ -12,20 +12,23 @@
 	min-height: 100vh;
 	margin: 0;
 	padding: 0;
+	font-size: 16px;
+	font-family: Roboto, "Open Sans", Arial, Helvetica,
+				 Verdana, sans-serif;
 }
 
 .hidden {
-	display: none;
+	display: none !important;
 }
 
-/* -------------------- header -------------------- */
+/* ----------------------- header ----------------------- */
 
 .header{
 	position: sticky;
 	top: 0;
 	grid-area: header;
 	z-index: 10;
-	background-color: #ffffff;
+	background-color: var(--color-white);
 }
 .header__inner{
 	display: flex;
@@ -33,19 +36,15 @@
 	width: 75%;
 	margin: 5px auto;
 }
-.header__tel{
-
+.header__cart{
+	display: flex !important;
+	align-items: center;
 }
-.header__tel-text{
-
-}
-.header__tel-icon{
-	width: 25px;
-	filter: invert(1);
-	display: none;
+.header__cart-icon{
+	width: 35px;
 }
 
-/* -------------------- navigation -------------------- */
+/* --------------------- navigation --------------------- */
 
 .nav{
 	display: flex;
@@ -53,7 +52,7 @@
 	flex-grow: 2;
 }
 
-/* -------------------- main -------------------- */
+/* ------------------------ main ------------------------ */
 
 .main{
 	grid-area: main;
@@ -71,7 +70,7 @@
 .aside__content{
 	grid-area: ma_aside;
 }
-.aside__content .section{
+.aside__content-sticky .section{
 	position: sticky;
 	top: 105px;
 }
@@ -82,7 +81,7 @@
 	display: none;
 }
 
-/* -------------------- forms -------------------- */
+/* ------------------------ forms ----------------------- */
 
 .form-subscribe__input-text{
 	padding: 25px;
@@ -91,15 +90,16 @@
 	font-size: 1.1em;
 	width: 50%;
 }
+.form-subscribe__input-text.focus,
 .form-subscribe__input-text:focus{
-	outline: 2px solid #333333;
+	outline: 2px solid var(--color-darkgray);
 }
 .form-subscribe__btn{
 	display: inline-block;
 	margin-left: -170px !important;
 }
 
-/* -------------------- footer -------------------- */
+/* ----------------------- footer ----------------------- */
 
 .footer{
 	grid-area: footer;

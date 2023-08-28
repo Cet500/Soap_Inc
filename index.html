@@ -10,8 +10,8 @@
 
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-		<!-- import main styles -->
-		<link rel="stylesheet" href="css/src/global.css">
+		<!-- import global vars -->
+		<link rel="stylesheet" href="css/src/global_vars.css">
 		<!-- import lib styles -->
 		<link rel="stylesheet" href="css/lib/blocks.css">
 		<link rel="stylesheet" href="css/lib/buttons.css">
@@ -19,14 +19,21 @@
 		<!-- import sub-lib styles -->
 		<link rel="stylesheet" href="css/lib/colors.css">
 		<link rel="stylesheet" href="css/lib/sizes.css">
+		<!-- import main styles -->
+		<link rel="stylesheet" href="css/src/global.css">
 		<!-- import media styles -->
 		<link rel="stylesheet" href="css/src/global_media.css">
 
 		<!-- import fonts Roboto -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap"
-			  rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+
+		<!-- import jquery -->
+		<script src="js/ext/jquery-3.7.0.min.js" defer></script>
+		<script src="js/ext/jquery.storage.js" defer></script>
+		<!-- import scripts -->
+		<script src="js/src/cart.js" defer></script>
 	</head>
 
 	<body class="body">
@@ -46,9 +53,9 @@
 					<a class="link" href="contacts.html">Контакты</a>
 				</nav>
 
-				<a class="header__tel btn btn-md btn-round btn-bold btn-pink" href="#">
-					<span class="header__tel-text">8 (800) 555-35-35</span>
-					<img class="header__tel-icon" src="img/icons/tel.svg" alt="svg icon tel" aria-disabled="true">
+				<a class="header__cart btn btn-mc btn-round btn-bold btn-pink" href="cart.html">
+					<img class="header__cart-icon" src="img/icons/cart.svg" alt="svg icon tel" aria-disabled="true">
+					<span class="header__cart-text"> (<span class="header__cart-value scripts__soap-cost">0</span> ₽)</span>
 				</a>
 			</div>
 		</header>
@@ -62,36 +69,42 @@
 						<div class="section__flex w60">
 							<div class="block-plus w50">
 								<img src="img/icons/like.svg" alt="svg icon" aria-disabled="true">
-								<p>Делаем мыло своими ручками. Поэтому оно ручной работы.</p>
+								<p class="text">Делаем мыло своими ручками. Поэтому оно ручной работы.</p>
 							</div>
 
 							<div class="block-plus w50">
 								<img src="img/icons/like.svg" alt="svg icon" aria-disabled="true">
-								<p>Если у вас мыло ручной работы, то оно прирученное.</p>
+								<p class="text">Если у вас мыло ручной работы, то оно прирученное.</p>
 							</div>
 
 							<div class="block-plus w50">
 								<img src="img/icons/like.svg" alt="svg icon" aria-disabled="true">
-								<p>Если мыло прирученное, то значит, оно не дикое.</p>
+								<p class="text">Если мыло прирученное, то значит, оно не дикое.</p>
 							</div>
 
 							<div class="block-plus w50">
 								<img src="img/icons/like.svg" alt="svg icon" aria-disabled="true">
-								<p>Если мыло не дикое, значит оно лучшее. Всё по фактам.</p>
+								<p class="text">Если мыло не дикое, значит оно лучшее. Всё по фактам.</p>
 							</div>
 						</div>
 
 						<br><br>
 
-						<p>
-							<a class="btn btn-lg btn-round btn-bold btn-white" href="#">Запросить прайс-лист</a>
+						<div>
+							<a class="btn btn-lg btn-round btn-bold btn-white inline-block"
+							   href="price_list.html">
+								Посмотреть прайс-лист
+							</a>
 
-							<a class="btn btn-lg btn-round btn-bold btn-pink" href="#">Заказать</a>
-						</p>
+							<a class="btn btn-lg btn-round btn-bold btn-pink inline-block"
+							   href="catalog.html">
+								Заказать
+							</a>
+						</div>
 					</div>
 				</section>
 
-				<section class="section clr-white">
+				<section class="section clr-light">
 					<div class="section__inner">
 						<h2 class="title title-h2">Почему мы?</h2>
 
@@ -123,79 +136,11 @@
 					</div>
 				</section>
 
-				<section class="section clr-white">
-					<div class="section__inner">
-						<h2 class="title title-h2">Наш ассортимент</h2>
-
-						<div class="section__flex w100">
-							<div class="block block-show clr-purple">
-								<h3 class="title title-h3">
-									Мишки
-								</h3>
-
-								<p class="text text-md">Любого цвета и аромата.</p>
-
-								<img src="img/photos/bears.png" alt="мишки">
-							</div>
-
-							<div class="block block-show clr-purple">
-								<h3 class="title title-h3">
-									Совушки
-								</h3>
-
-								<p class="text text-md">Разной степени укуренности.</p>
-
-								<img src="img/photos/owl.png" alt="сова">
-							</div>
-
-							<div class="block block-show clr-purple">
-								<h3 class="title title-h3">
-									И вообще что угодно
-								</h3>
-
-								<p class="text text-md">Любой каприз за ваши деньги.</p>
-
-								<img src="img/photos/heart.png" alt="сердце">
-							</div>
-
-							<div class="block block-show clr-purple">
-								<h3 class="title title-h3">
-									Волшебные амулеты
-								</h3>
-
-								<p class="text text-md">Ууу... магия...</p>
-
-								<img src="img/photos/amulet.png" alt="амулет">
-							</div>
-
-							<div class="block block-show clr-purple">
-								<h3 class="title title-h3">
-									Собачки
-								</h3>
-
-								<p class="text text-md">Все же любят щенят?</p>
-
-								<img src="img/photos/puppy_blue.png" alt="щенок">
-							</div>
-
-							<div class="block block-show clr-purple">
-								<h3 class="title title-h3">
-									Волшебные щеночки
-								</h3>
-
-								<p class="text text-md">Как обычные, но необычные</p>
-
-								<img src="img/photos/puppy_azure.png" alt="волшебный щенок">
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="section clr-white">
+				<section class="section clr-light">
 					<div class="section__inner">
 						<h2 class="title title-h2">Популярные товары</h2>
 
-						<div class="section__flex w100">
+						<div class="section__flex no-grow w100">
 							<div class="block block-show clr-pink">
 								<img src="img/photos/bears.png" alt="мишки">
 
@@ -226,6 +171,15 @@
 								<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
 							</div>
 						</div>
+
+						<br>
+
+						<div>
+							<a class="btn btn-lg btn-round btn-bold btn-white inline-block"
+							   href="catalog.html">
+								Смотреть все товары
+							</a>
+						</div>
 					</div>
 				</section>
 
@@ -244,7 +198,7 @@
 					</div>
 				</section>
 
-				<section class="section clr-white">
+				<section class="section clr-light">
 					<div class="section__inner">
 						<h2 class="title title-h2">Нас хвалят и возносят</h2>
 

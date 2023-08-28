@@ -1,28 +1,28 @@
-/* ------------------------------- colors ------------------------------- */
+/* ---------------------------------- colors -------------------------------- */
 
-/* -------------------- background colors -------------------- */
+/* ------------------ background colors ----------------- */
 
-.clr-white{
-	background-color: #fbf1f7;
+.clr-light{
+	background-color: var(--color-light);
 }
 .clr-pink{
-	background-color: #ffbdd3;
+	background-color: var(--color-pink);
 }
 .clr-purple{
-	background-color: #e1c1f4;
+	background-color: var(--color-purple);
 }
 
-/* -------------------- text colors -------------------- */
+/* --------------------- text colors -------------------- */
 
 .clr-white-text{
-	color: white;
+	color: var(--color-white);
 }
 .clr-grey-text{
-	color: gray;
+	color: var(--color-lightgray);
 }
 .clr-darkgrey-text{
-	color: #333333;
+	color: var(--color-darkgray);
 }
 .clr-black-text{
-	color: black;
+	color: var(--color-black);
 }

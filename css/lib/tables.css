@@ -1,0 +1,67 @@
+/* --------------------------------- tables --------------------------------- */
+
+/* ------------------------ base ------------------------ */
+
+.table{
+	font-family: Roboto, sans-serif;
+	font-size: 1em;
+	border-collapse: collapse;
+}
+.table thead{
+	font-weight: 500;
+	border-bottom: 1px solid #999999;
+
+}
+.table tfoot{
+	font-weight: 500;
+	border-top: 1px solid #999999;
+}
+
+/* ----------------------- borders ---------------------- */
+
+.table-hor tr{
+	border-top: 1px solid #999999;
+}
+.table-hor :first-child{
+	border-top: none;
+}
+
+.table-vert td{
+	border-left: 1px solid #999999;
+}
+.table-vert :first-child{
+	border-left: none;
+}
+
+.table-full td{
+	border: 1px solid #999999;
+}
+
+/* ------------------------ sizes ----------------------- */
+
+.table-sm{
+	font-size: 1em;
+}
+.table-sm td{
+	padding: 4px 5px 4px 5px;
+}
+
+.table-md{
+	font-size: 1.15em;
+}
+.table-md td{
+	padding: 7px 8px 7px 8px;
+}
+
+.table-lg{
+	font-size: 1.4em;
+}
+.table-lg td{
+	padding: 10px;
+}
+
+/* ----------------------- effects ---------------------- */
+
+.table-hover tr:hover{
+	background-color: rgba(0,0,0, 0.1);
+}

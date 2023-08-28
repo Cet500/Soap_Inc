@@ -1,11 +1,12 @@
-/* ------------------------------- text ------------------------------- */
+/* ---------------------------------- text ---------------------------------- */
 
-/* -------------------- titles -------------------- */
+/* ----------------------- titles ----------------------- */
 
 .title{
 	font-family: Roboto, sans-serif;
 	font-weight: bold;
-	color: #000;
+	display: block;
+	color: var(--color-black);
 }
 .title-h1{
 	font-size: 3em;
@@ -19,64 +20,121 @@
 	font-size: 1.5em;
 	margin: 25px 0;
 }
+.title-h4{
+	font-size: 1.2em;
+	margin: 18px 0;
+}
+.title-h5{
+	font-size: 1.15em;
+	margin: 14px 0;
+}
 
-/* -------------------- text -------------------- */
+/* --------------------- plain text --------------------- */
 
 .text{
-	margin: 1em 0;
 	font-family: Roboto, sans-serif;
 	font-size: 1.25em;
-	color: #000;
-}
-.text-md{
-	font-size: 1em;
+	margin: 1em 0;
+	color: var(--color-black);
 }
 .text-sm{
 	font-size: 1em;
 	font-weight: 300;
 	color: #222;
 }
+.text-md{
+	font-size: 1.15em;
+}
+.text-lg{
+	font-size: 1.4em;
+}
+
+/* ------------------------ tags ------------------------ */
+
+.tags-list{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+.tags-list li{
+	margin: 5px;
+	padding: 5px 8px;
+	border-radius: 7px;
+	background-color: var(--color-purple);
+}
+
+/* ------------------------ price ----------------------- */
 
 .price-wrap{
+	font-family: "Noto Sans Mono", monospace;
 	font-size: 1em;
 	font-weight: 400;
-	color: #333;
+	color: var(--color-darkgray);
 }
 .price{
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	font-weight: 500;
-	color: #000;
+	color: var(--color-black);
 }
 
-/* -------------------- links -------------------- */
+/* ----------------- just monospace text ---------------- */
+
+.monospace{
+	font-family: "Noto Sans Mono", monospace;
+	white-space: pre;
+}
+
+/* ------------------------ links ----------------------- */
 
 .link{
 	display: inline-block;
 	padding: 2px 5px;
 	margin: 5px 15px 5px 0;
 	font-family: Roboto, sans-serif;
-	font-size: 1.2em;
+	font-size: 1.25em;
 	text-decoration: none;
-	color: #000;
-}
-.link:hover{
-	color: #ec407a;
-}
-.link:active{
-	color: #a9203e;
-}
-.link:focus{
-	outline: 2px solid #444444;
-	border-radius: 10px;
+	color: var(--color-link);
 }
 
-/* -------------------- logo -------------------- */
+/* ------------------- links variants ------------------- */
+
+.link:hover,
+.link.hover{
+	color: var(--color-link-hover);
+	outline: none !important;
+}
+.link:active,
+.link.active{
+	color: var(--color-link-active);
+	outline: none !important;
+}
+.link:focus,
+.link.focus{
+	outline: 2px solid var(--color-link-focus);
+	border-radius: 10px;
+}
+.link:disabled,
+.link.disabled,
+.link[disabled]{
+	color: var(--color-gray);
+	cursor: default;
+	pointer-events: none;
+	user-select: none;
+}
+.link.inline{
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+/* ------------------------ logo ------------------------ */
 
 .logo{
 	display: inline-flex;
 	align-items: center;
-	font-family: "Comic Sans MS", cursive;
+	font-family: "Roboto", cursive;
 	font-size: 2em;
+	font-style: italic;
 }
 .logo-image{
 	border-radius: 50%;
@@ -85,20 +143,23 @@
 .logo-link{
 	margin: 0 5px;
 	text-decoration: none;
-	color: #000000;
+	color:  var(--color-black);
 }
-.logo-link:hover{
-	color: #777777;
+.logo-link:hover,
+.logo-link.hover{
+	color: var(--color-lightgray);
 }
-.logo-link:active{
-	color: #333333;
+.logo-link:active,
+.logo-link.active{
+	color: var(--color-darkgray);
 }
-.logo-link:focus{
-	outline: 2px solid #333333;
+.logo-link:focus,
+.logo-link.focus{
+	outline: 2px solid var(--color-darkgray);
 	border-radius: 10px;
 }
 
-/* ------- small size ------- */
+/* --------------------- logo sizes --------------------- */
 
 .logo-sm{
 	font-size: 1.75em;
@@ -107,16 +168,12 @@
 	width: 40px;
 }
 
-/* ------- normal size ------- */
-
 .logo-md{
 	font-size: 2em;
 }
 .logo-md .logo-image{
 	width: 60px;
 }
-
-/* ------- large size ------- */
 
 .logo-lg{
 	font-size: 2.75em;
