@@ -1,0 +1,295 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+	<div class="main__inner main__inner-aside">
+		<aside class="aside__content aside__content-sticky">
+			<section class="section section-filter-aside clr-light">
+				<div class="section__inner">
+					<p class="title title-h3">Выбор мыла:</p>
+
+					<button class="btn btn-bold btn-round btn-white block w100"
+							data-filter="*" onclick=filter(event)>Всё</button>
+
+					<button class="btn btn-bold btn-round btn-white block w100"
+							data-filter="f-bears" onclick=filter(event)>Мишки</button>
+
+					<button class="btn btn-bold btn-round btn-white block w100"
+							data-filter="f-puppy" onclick=filter(event)>Щенки</button>
+
+					<button class="btn btn-bold btn-round btn-white block w100"
+							data-filter="f-penguin" onclick=filter(event)>Пингвины</button>
+				</div>
+			</section>
+		</aside>
+
+		<div class="main__content">
+			<section class="section clr-light">
+				<div class="section__inner">
+					<h1 class="title title-h1">Каталог</h1>
+
+					<p class="text">Список всей нашей продукции</p>
+				</div>
+			</section>
+
+			<section class="section section-filter-main clr-light">
+				<div class="section__inner">
+					<p class="title title-h3">Выбор мыла:</p>
+
+					<div class="section__flex">
+						<button class="btn btn-bold btn-round btn-white block"
+								data-filter="*" onclick=filter(event)>Всё</button>
+
+						<button class="btn btn-bold btn-round btn-white block"
+								data-filter="f-bears" onclick=filter(event)>Мишки</button>
+
+						<button class="btn btn-bold btn-round btn-white block"
+								data-filter="f-puppy" onclick=filter(event)>Щенки</button>
+
+						<button class="btn btn-bold btn-round btn-white block"
+								data-filter="f-penguin" onclick=filter(event)>Пингвины</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="section clr-light">
+				<div class="section__inner">
+					<div class="section__flex no-grow section__filter w100">
+						<div class="block block-show clr-pink f-bears">
+							<img src="{{ url_for( 'static', filename = 'img/photos/bears.png') }}" alt="мишки">
+
+							<h3 class="title title-h3">
+								Парные мишки
+							</h3>
+
+							<p class="text price-wrap">от <span class="price">1000 ₽</span></p>
+
+							<p class="text">
+								<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
+								   href="{{ url_for('info_bear') }}">
+									Инфо</a>
+
+								<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
+								   href="{{ url_for('cart') }}">
+									Взято (1)</a>
+
+								<button class="btn btn-sm btn-round btn-bold btn-pink inline-block"
+										onclick="buySoap(this)"
+										data-soap-id="11" data-soap-price="500" data-soap-type="BEAR"
+										data-soap-name="Мишка" data-soap-image="bears"
+										data-soap-color="зелёный и красный" data-soap-aroma="лайм и грейпфрут">
+									Купить
+								</button>
+							</p>
+						</div>
+
+						<div class="block block-show clr-pink f-bears">
+							<img src="{{ url_for( 'static', filename = 'img/photos/bear_yellow.png') }}" alt="мишка жёлтый">
+
+							<h3 class="title title-h3">
+								Мишка жёлтый
+							</h3>
+
+							<p class="text price-wrap">от <span class="price">500 ₽</span> / 1 шт</p>
+
+							<p class="text">
+								<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
+								   href="{{ url_for('info_bear') }}">
+									Инфо</a>
+
+								<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
+								   href="{{ url_for('cart') }}">
+									Взято (1)</a>
+
+								<button class="btn btn-sm btn-round btn-bold btn-pink inline-block"
+										onclick="buySoap(this)"
+										data-soap-id="12" data-soap-price="500" data-soap-type="BEAR"
+										data-soap-name="Мишка" data-soap-image="bear_yellow"
+										data-soap-color="жёлтый" data-soap-aroma="лайм">
+									Купить
+								</button>
+							</p>
+						</div>
+
+						<div class="block block-show clr-pink f-bears">
+							<img src="{{ url_for( 'static', filename = 'img/photos/bear_blue.png') }}" alt="мишка синий">
+
+							<h3 class="title title-h3">
+								Мишка синий
+							</h3>
+
+							<p class="text price-wrap">от <span class="price">500 ₽</span> / 1 шт</p>
+
+							<p class="text">
+								<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
+								   href="{{ url_for('info_bear') }}">
+									Инфо</a>
+
+								<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
+								   href="{{ url_for('cart') }}">
+									Взято (1)</a>
+
+								<button class="btn btn-sm btn-round btn-bold btn-pink inline-block"
+										onclick="buySoap(this)"
+										data-soap-id="13" data-soap-price="500" data-soap-type="BEAR"
+										data-soap-name="Мишка" data-soap-image="bear_blue"
+										data-soap-color="синий" data-soap-aroma="океан">
+									Купить
+								</button>
+							</p>
+						</div>
+
+						<div class="block block-show clr-pink f-puppy">
+							<img src="{{ url_for( 'static', filename = 'img/photos/puppy_blue.png') }}" alt="синий щенок">
+
+							<h3 class="title title-h3">
+								Синий щенок
+							</h3>
+
+							<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
+
+							<p class="text">
+								<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
+								   href="{{ url_for('info_puppy') }}">
+									Инфо</a>
+
+								<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
+								   href="{{ url_for('cart') }}">
+									Взято (1)</a>
+
+								<button class="btn btn-sm btn-round btn-bold btn-pink inline-block"
+										onclick="buySoap(this)"
+										data-soap-id="21" data-soap-price="1000" data-soap-type="PUPPY"
+										data-soap-name="Щенок" data-soap-image="puppy_blue"
+										data-soap-color="синий" data-soap-aroma="океан">
+									Купить
+								</button>
+							</p>
+						</div>
+
+						<div class="block block-show clr-pink f-puppy">
+							<img src="{{ url_for( 'static', filename = 'img/photos/puppy_green.png') }}" alt="зелёный щенок">
+
+							<h3 class="title title-h3">
+								Зелёный щенок
+							</h3>
+
+							<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
+
+							<p class="text">
+								<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
+								   href="{{ url_for('info_puppy') }}">
+									Инфо</a>
+
+								<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
+								   href="{{ url_for('cart') }}">
+									Взято (1)</a>
+
+								<button class="btn btn-sm btn-round btn-bold btn-pink inline-block"
+										onclick="buySoap(this)"
+										data-soap-id="22" data-soap-price="1000" data-soap-type="PUPPY"
+										data-soap-name="Щенок" data-soap-image="puppy_green"
+										data-soap-color="зелёный" data-soap-aroma="лес">
+									Купить
+								</button>
+							</p>
+						</div>
+
+						<div class="block block-show clr-pink f-puppy">
+							<img src="{{ url_for( 'static', filename = 'img/photos/puppy_azure.png') }}" alt="лазурный щенок">
+
+							<h3 class="title title-h3">
+								Лазурный щенок
+							</h3>
+
+							<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
+
+							<p class="text">
+								<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
+								   href="{{ url_for('info_puppy') }}">
+									Инфо</a>
+
+								<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
+								   href="{{ url_for('cart') }}">
+									Взято (1)</a>
+
+								<button class="btn btn-sm btn-round btn-bold btn-pink inline-block"
+										onclick="buySoap(this)"
+										data-soap-id="23" data-soap-price="1000" data-soap-type="PUPPY"
+										data-soap-name="Щенок" data-soap-image="puppy_azure"
+										data-soap-color="лазурь" data-soap-aroma="океан">
+									Купить
+								</button>
+							</p>
+						</div>
+
+						<div class="block block-show clr-pink f-puppy">
+							<img src="{{ url_for( 'static', filename = 'img/photos/puppy_lightblue.png') }}" alt="голубой щенок">
+
+							<h3 class="title title-h3">
+								Голубой щенок
+							</h3>
+
+							<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
+
+							<p class="text">
+								<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
+								   href="{{ url_for('info_puppy') }}">
+									Инфо</a>
+
+								<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
+								   href="{{ url_for('cart') }}">
+									Взято (1)</a>
+
+								<button class="btn btn-sm btn-round btn-bold btn-pink inline-block"
+										onclick="buySoap(this)"
+										data-soap-id="24" data-soap-price="1000" data-soap-type="PUPPY"
+										data-soap-name="Щенок" data-soap-image="puppy_lightblue"
+										data-soap-color="голубой" data-soap-aroma="океан">
+									Купить
+								</button>
+							</p>
+						</div>
+
+						<div class="block block-show clr-pink f-penguin">
+							<img src="{{ url_for( 'static', filename = 'img/photos/penguin.png') }}" alt="пингвин">
+
+							<h3 class="title title-h3">
+								Пингвины
+							</h3>
+
+							<p class="text price-wrap">от <span class="price">1 000 ₽</span> / 1 шт</p>
+
+							<p class="text">
+								<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
+								   href="{{ url_for('info_penguin') }}">
+									Инфо</a>
+
+								<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
+								   href="{{ url_for('cart') }}">
+									Взято (1)</a>
+
+								<button class="btn btn-sm btn-round btn-bold btn-pink inline-block"
+										onclick="buySoap(this)"
+										data-soap-id="3" data-soap-price="1000" data-soap-type="PENGUIN"
+										data-soap-name="Пингвин" data-soap-image="penguin"
+										data-soap-color="чёрный" data-soap-aroma="океан">
+									Купить
+								</button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+	<script src="{{ url_for( 'static', filename = 'js/src/filter.js' ) }}"></script>
+
+{% endblock %}

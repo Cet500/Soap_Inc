@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+	<div class="main__inner">
+		<section class="section clr-light">
+			<div class="section__inner">
+				<h1 class="title title-h1">О нас</h1>
+
+				<p class="text">Мы самые-самые. Я даже не знаю, как нас ещё нахвалить.</p>
+			</div>
+		</section>
+
+		<section class="section clr-light">
+			<div class="section__inner">
+				<h2 class="title title-h2">Наши преимущества</h2>
+
+				<div class="section__flex w60">
+					<div class="block-plus w50">
+						<img src="{{ url_for( 'static', filename = 'img/icons/price.svg' ) }}" alt="logo">
+						<p class="text">Цена просто огонь. Выше вы нигде не найдёте. Мы пытались.</p>
+					</div>
+
+					<div class="block-plus w50">
+						<img src="{{ url_for( 'static', filename = 'img/icons/delivery.svg' ) }}" alt="logo">
+						<p class="text">Мыла просто завались. Вот и шлём кому попало.</p>
+					</div>
+
+					<div class="block-plus w50">
+						<img src="{{ url_for( 'static', filename = 'img/icons/garant.svg' ) }}" alt="logo">
+						<p class="text">Самые превосходные исходные материалы. Это не хухры-мухры.</p>
+					</div>
+
+					<div class="block-plus w50">
+						<img src="{{ url_for( 'static', filename = 'img/icons/exclusive.svg' ) }}" alt="logo">
+						<p class="text">Лучшие возможные и невозможные варианты мыла.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+{% endblock %}
