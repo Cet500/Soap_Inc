@@ -1,6 +1,7 @@
-from flask import render_template
+from flask import render_template, url_for
 from flask_babel import _, get_locale
-from app import app
+from app import app, db
+from app.models import Soap
 
 
 @app.route('/')
@@ -11,7 +12,7 @@ def index():
 
 @app.route('/catalog')
 def catalog():
-    return render_template("catalog.html")
+    return render_template("catalog.html" ) #soaps = soaps
 
 
 @app.route('/about')
@@ -47,3 +48,8 @@ def info_penguin():
 @app.route('/info_puppy')
 def info_puppy():
     return render_template("info_puppy.html")
+
+
+@app.route('/components')
+def components():
+    return render_template("components.html")
