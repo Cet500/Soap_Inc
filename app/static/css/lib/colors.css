@@ -12,6 +12,15 @@
 	background-color: var(--color-purple);
 }
 
+/* - - - - - - - - - - - - - - - - - - - - - - */
+
+.clr-success{
+	background-color: var(--color-success);
+}
+.clr-danger{
+	background-color: var(--color-danger);
+}
+
 /* --------------------- text colors -------------------- */
 
 .clr-white-text{
@@ -25,4 +34,13 @@
 }
 .clr-black-text{
 	color: var(--color-black);
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - */
+
+.clr-success-text{
+	color: var(--color-success);
+}
+.clr-danger-text{
+	color: var(--color-danger);
 }
