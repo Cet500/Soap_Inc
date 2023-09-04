@@ -6,35 +6,36 @@
 	font-family: Roboto, sans-serif;
 	font-size: 1em;
 	border-collapse: collapse;
+	color: var(--color-black);
 }
 .table thead{
 	font-weight: 500;
-	border-bottom: 1px solid #999999;
+	border-bottom: 1px solid var(--color-gray);
 
 }
 .table tfoot{
 	font-weight: 500;
-	border-top: 1px solid #999999;
+	border-top: 1px solid var(--color-gray);
 }
 
 /* ----------------------- borders ---------------------- */
 
 .table-hor tr{
-	border-top: 1px solid #999999;
+	border-top: 1px solid var(--color-gray);
 }
 .table-hor :first-child{
 	border-top: none;
 }
 
 .table-vert td{
-	border-left: 1px solid #999999;
+	border-left: 1px solid var(--color-gray);
 }
 .table-vert :first-child{
 	border-left: none;
 }
 
 .table-full td{
-	border: 1px solid #999999;
+	border: 1px solid var(--color-gray);
 }
 
 /* ------------------------ sizes ----------------------- */
