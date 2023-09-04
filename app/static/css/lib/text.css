@@ -40,7 +40,7 @@
 .text-sm{
 	font-size: 1em;
 	font-weight: 300;
-	color: #222;
+	opacity: 0.95;
 }
 .text-md{
 	font-size: 1.15em;
@@ -82,6 +82,30 @@
 .monospace{
 	font-family: "Noto Sans Mono", monospace;
 	white-space: pre;
+}
+
+/* ------------------- notifications -------------------- */
+
+.notice{
+	width: max-content;
+	margin: 1em 0;
+	padding: 17px 15px 17px 15px;
+	border-radius: 30px;
+	/*border-top-right-radius: 30px;*/
+	/*border-bottom-right-radius: 30px;*/
+	border: 2px solid rgba(0, 0, 0, 0.2);
+}
+.notice::after{
+	content: "X";
+	padding: 10px;
+}
+.notice:hover::after{
+	content: "X";
+	padding: 10px;
+	filter: invert(1) brightness(1);
+}
+.notice.none{
+	display: none;
 }
 
 /* ------------------------ links ----------------------- */
@@ -147,15 +171,15 @@
 }
 .logo-link:hover,
 .logo-link.hover{
-	color: var(--color-lightgray);
+	color: var(--color-darkgray);
 }
 .logo-link:active,
 .logo-link.active{
-	color: var(--color-darkgray);
+	color: var(--color-gray);
 }
 .logo-link:focus,
 .logo-link.focus{
-	outline: 2px solid var(--color-darkgray);
+	outline: 2px solid var(--color-gray);
 	border-radius: 10px;
 }
 
