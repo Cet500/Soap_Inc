@@ -15,6 +15,7 @@
 		<!-- import lib styles -->
 		<link rel="stylesheet" href="{{ url_for( 'static', filename = 'css/lib/blocks.css' ) }}">
 		<link rel="stylesheet" href="{{ url_for( 'static', filename = 'css/lib/buttons.css' ) }}">
+		<link rel="stylesheet" href="{{ url_for( 'static', filename = 'css/lib/forms.css' ) }}">
 		<link rel="stylesheet" href="{{ url_for( 'static', filename = 'css/lib/text.css' ) }}">
 		<link rel="stylesheet" href="{{ url_for( 'static', filename = 'css/lib/tables.css' ) }}">
 		<!-- import sub-lib styles -->
@@ -25,6 +26,10 @@
 		{% block page_style %}{% endblock %}
 		<!-- import media styles -->
 		<link rel="stylesheet" href="{{ url_for( 'static', filename = 'css/src/global_media.css' ) }}">
+
+		{% if current_user.theme == "D" %}
+		<link rel="stylesheet" href="{{ url_for( 'static', filename = 'css/src/global_dark.css' ) }}">
+		{% endif %}
 
 		<!-- import fonts Roboto -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +62,62 @@
 					<a class="link" href="{{ url_for('about') }}">О нас</a>
 					<a class="link" href="{{ url_for('contacts') }}">Контакты</a>
 				</nav>
+
+				{% if current_user.is_authenticated %}
+
+					<div class="header__user">
+						<span class="text text-md">{{ current_user.name }}</span>
+						<ul class="header__user-submenu">
+
+							{% if current_user.theme == "L" %}
+
+								<li>
+									<a class="link" href="{{ url_for('api_to_dark') }}">Тема: Light</a>
+								</li>
+
+							{% else %}
+
+								<li>
+									<a class="link" href="{{ url_for('api_to_light') }}">Тема: Dark</a>
+								</li>
+
+							{% endif %}
+
+							{% if current_user.role == "A" %}
+
+								<li>
+									<a class="link" href="{{ url_for('admin') }}">Админ-панель</a>
+								</li>
+								<li>
+									<a class="link" href="{{ url_for('api_index') }}">API</a>
+								</li>
+								<li>
+									<a class="link" href="{{ url_for('components') }}">Компоненты</a>
+								</li>
+
+							{% endif %}
+
+							<li>
+								<a class="link" href="{{ url_for('logout') }}">Выйти</a>
+							</li>
+						</ul>
+					</div>
+
+				{% else %}
+
+					<div class="header__user">
+						<span class="text text-md">Вход</span>
+						<ul class="header__user-submenu">
+							<li>
+								<a class="link" href="{{ url_for('login') }}">Войти</a>
+							</li>
+							<li>
+								<a class="link" href="{{ url_for('register') }}">Регистрация</a>
+							</li>
+						</ul>
+					</div>
+
+				{% endif %}
 
 				<a class="header__cart btn btn-mc btn-round btn-bold btn-pink" href="{{ url_for('cart') }}">
 					<img class="header__cart-icon" src="{{ url_for( 'static', filename = 'img/icons/cart.svg' ) }}"

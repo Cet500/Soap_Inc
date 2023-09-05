@@ -135,6 +135,9 @@
 		flex-basis: calc( calc( 100% - 120px ) / 2 );
 	}
 
+	.form-60{
+		max-width: 70%;
+	}
 	.form-subscribe__input-text{
 		width: 65%;
 	}
@@ -184,6 +187,9 @@
 		width: 85%;
 	}
 
+	.form-60{
+		max-width: 80%;
+	}
 	.form-subscribe__input-text{
 		width: 70%;
 	}
@@ -203,6 +209,9 @@
 	}
 	.header__logo{
 		grid-area: hi_logo;
+	}
+	.header__user{
+		display: none;
 	}
 	.header__cart{
 		grid-area: hi_tel;
@@ -239,6 +248,9 @@
 		flex-basis: 90%;
 	}
 
+	.form-60{
+		max-width: 100%;
+	}
 	.form-subscribe__input-text{
 		width: 75%;
 	}
@@ -370,7 +382,7 @@
 
 }
 
-/* ---------------------- 430 - 450 --------------------- */
+/* ----------------------- 0 - 450 ---------------------- */
 
 @media screen and (max-width: 450px) {
 
@@ -400,6 +412,13 @@
 	}
 	.cart__block__row-info{
 		margin-left: 10px;
+	}
+
+	.form__label{
+		flex-direction: column;
+	}
+	.form__input{
+		width: 80%;
 	}
 
 }

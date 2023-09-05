@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+	<div class="main__inner">
+		<section class="section clr-purple">
+			<div class="section__inner">
+				<h1 class="title title-h1">Application Programing Interface</h1>
+
+				<p class="text">Программный доступ к сайту.</p>
+			</div>
+		</section>
+
+		<section class="section clr-light">
+			<div class="section__inner">
+				<h2 class="title title-h3">/api/to_light</h2>
+
+				<p class="text">Меняет тему на светлую.</p>
+
+				<p class="text text-md">
+					<b>Авторизация: </b> требуется
+				</p>
+
+				<hr>
+
+				<h2 class="title title-h3">/api/to_dark</h2>
+
+				<p class="text">Меняет тему на тёмную.</p>
+
+				<p class="text text-md">
+					<b>Авторизация: </b> требуется
+				</p>
+			</div>
+		</section>
+	</div>
+
+{% endblock %}

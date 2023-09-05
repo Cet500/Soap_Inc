@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+	<div class="main__inner">
+		<section class="section clr-pink">
+			<div class="section__inner">
+				<h1 class="title title-h1">Вход в систему</h1>
+
+				<p class="text">Заходи не бойся, выходи - не плачь.</p>
+			</div>
+		</section>
+
+		<section class="section clr-purple">
+			<div class="section__inner">
+				<form class="form form-60" action="" method="post">
+					<fieldset class="form__fieldset">
+						<legend>Данные для входа</legend>
+
+						{{ form.hidden_tag() }}
+
+						<label class="form__label">
+							Логин:
+							{{ form.username( class="form__input", id="username", placeholder="login"  ) }}
+						</label>
+
+							{% for error in form.username.errors %}
+								<div class="notice clr-danger clr-white-text text text-md"
+									 onclick="this.classList.add('none')">
+									{{error}}
+								</div>
+							{% endfor %}
+
+						<label class="form__label">
+							Пароль:
+							{{ form.password( class="form__input", id="password", placeholder="password" ) }}
+						</label>
+
+							{% for error in form.password.errors %}
+								<div class="notice clr-danger clr-white-text text text-md"
+									 onclick="this.classList.add('none')">
+									{{error}}
+								</div>
+							{% endfor %}
+					</fieldset>
+
+					{{ form.submit( class="btn btn-round btn-white", value="Войти" ) }}
+				</form>
+			</div>
+		</section>
+	</div>
+
+{% endblock %}
