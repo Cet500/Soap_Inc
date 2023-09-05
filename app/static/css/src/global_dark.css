@@ -1,0 +1,61 @@
+/* ----------------------------- dark colors ------------------------------ */
+
+/* --------------------- root colors -------------------- */
+
+@media (prefers-color-scheme: dark) {
+
+	.body{
+		color-scheme: dark;
+		background: var(--color-white);
+
+		/* monochrome */
+		--color-white:      #363636;
+		--color-lightgray:  #4b4a4a;
+		--color-gray:       #9f9f9f;
+		--color-darkgray:   #c9c8c8;
+		--color-black:      #f3f3f0;
+
+		/* accents */
+		--color-light:    #484646;
+		--color-pink: 	  #696991;
+		--color-darkpink: #a92e54;
+		--color-purple:   #696991;
+
+		/* types */
+		--color-success: #94c23d;
+		--color-danger: #ff4233;
+
+		/* links */
+		--color-link: 		 #dcdada;
+		--color-link-hover:	 #ec407a;
+		--color-link-active: #a9203e;
+		--color-link-focus:  #a9a9a9;
+
+		/* special */
+		--color-extra-lightgray: #2d2d2d;
+	}
+
+/* ------------------------ text ------------------------ */
+
+/* ----------------------- buttons ---------------------- */
+
+	.btn{
+
+	}
+	.btn-pink {
+		color: var(--color-black);
+	}
+
+/* ------------------------ forms ----------------------- */
+
+
+/* ------------------------ other ----------------------- */
+
+	.block-show img{
+		filter: brightness(0.95)  drop-shadow(0px 0px 2px var(--color-black));
+	}
+
+	img[alt='svg icon'] {
+		filter: brightness(0.95) grayscale(5%) saturate(1.15);
+	}
+}
