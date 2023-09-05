@@ -1,2 +1,6 @@
+**/__pycache__/
+.env
+.flask/
 .idea/
+migrations/
 temp/
