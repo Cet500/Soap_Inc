@@ -4,11 +4,16 @@
 
 На данный момент, это доработанный "скелет", на который нужно добавлять реальное содержимое страниц.
 
-![Static Badge](https://img.shields.io/badge/version-0.2.0-blue?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/version-0.2.1-blue?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/code_name-Afrodita-blue?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/status-in_progress-gree?style=for-the-badge)
 
 ## История версий
+
+### 0.2.1 - Afrodita
+
+Угадай что? Ещё одно переписывание. Точнее, перестройка. Один монолитный блок был распилен пока что на три.
+Дальше пилить его будет проще. А-ля микросервисная архитектура. Это модно.
 
 ### 0.2.0 - Afrodita
 
