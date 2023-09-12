@@ -4,11 +4,17 @@
 
 На данный момент, это доработанный "скелет", на который нужно добавлять реальное содержимое страниц.
 
-![Static Badge](https://img.shields.io/badge/version-0.1.0-blue?style=for-the-badge)
-![Static Badge](https://img.shields.io/badge/code_name-Anna-blue?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/version-0.2.0-blue?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/code_name-Afrodita-blue?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/status-in_progress-gree?style=for-the-badge)
 
 ## История версий
+
+### 0.2.0 - Afrodita
+
+Ещё одно полное переписывание проекта. На этот раз на Python ( микро-фреймворк Flask с дополнениями ).
+
+Теперь у сайта есть своя база данных, server side rendering и многое другое.
 
 ### 0.1.0 - Anna
 
