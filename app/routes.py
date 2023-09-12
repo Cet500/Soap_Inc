@@ -1,6 +1,5 @@
-from flask import redirect, render_template, send_from_directory, request, url_for, g
+from flask import redirect, render_template, send_from_directory, request, url_for
 from flask_login import current_user, login_user, logout_user
-from flask_babel import _, get_locale
 from app import app, db
 from app.models import User, Soap
 from app.forms import LoginForm, RegisterForm
@@ -94,7 +93,7 @@ def before_request():
 # ---------------------- Admin pages --------------------- #
 
 
-@app.route('/admin')
+@app.route('/admin/')
 def admin():
 	return render_template("admin/index.html")
 
@@ -130,11 +129,11 @@ def register():
 	form = RegisterForm()
 
 	if form.validate_on_submit():
-		u = User( name     = form.name.data,
-				  username = form.username.data,
-				  email    = form.email.data,
-				  phone    = form.phone.data,
-				  sex      = form.sex.data )
+		u = User( name     = form.name.data,      # type: ignore[call-arg]
+				  username = form.username.data,  # type: ignore[call-arg]
+				  email    = form.email.data,     # type: ignore[call-arg]
+				  phone    = form.phone.data,     # type: ignore[call-arg]
+				  sex      = form.sex.data )      # type: ignore[call-arg]
 		u.set_password( password = form.password.data )
 		db.session.add(u)
 		db.session.commit()
