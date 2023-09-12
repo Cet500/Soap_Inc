@@ -1,3 +1,4 @@
 from app import app
 
-app.run(debug = True)
+# Start server
+app.run( debug = True )

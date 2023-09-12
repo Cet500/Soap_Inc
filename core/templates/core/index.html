@@ -10,25 +10,25 @@
 
 				<div class="section__flex w60">
 					<div class="block-plus w50">
-						<img src="{{ url_for( 'static', filename = 'img/icons/like.svg' ) }}"
+						<img src="{{ url_for( 'core.static', filename = 'img/icons/like.svg' ) }}"
 							 alt="svg icon" aria-disabled="true">
 						<p class="text">Делаем мыло своими ручками. Поэтому оно ручной работы.</p>
 					</div>
 
 					<div class="block-plus w50">
-						<img src="{{ url_for( 'static', filename = 'img/icons/like.svg' ) }}"
+						<img src="{{ url_for( 'core.static', filename = 'img/icons/like.svg' ) }}"
 							 alt="svg icon" aria-disabled="true">
 						<p class="text">Если у вас мыло ручной работы, то оно прирученное.</p>
 					</div>
 
 					<div class="block-plus w50">
-						<img src="{{ url_for( 'static', filename = 'img/icons/like.svg' ) }}"
+						<img src="{{ url_for( 'core.static', filename = 'img/icons/like.svg' ) }}"
 							 alt="svg icon" aria-disabled="true">
 						<p class="text">Если мыло прирученное, то значит, оно не дикое.</p>
 					</div>
 
 					<div class="block-plus w50">
-						<img src="{{ url_for( 'static', filename = 'img/icons/like.svg' ) }}"
+						<img src="{{ url_for( 'core.static', filename = 'img/icons/like.svg' ) }}"
 							 alt="svg icon" aria-disabled="true">
 						<p class="text">Если мыло не дикое, значит оно лучшее. Всё по фактам.</p>
 					</div>
@@ -38,12 +38,12 @@
 
 				<div>
 					<a class="btn btn-lg btn-round btn-bold btn-white inline-block"
-					   href="{{ url_for('price_list') }}">
+					   href="{{ url_for('core.price_list') }}">
 						Посмотреть прайс-лист
 					</a>
 
 					<a class="btn btn-lg btn-round btn-bold btn-pink inline-block"
-					   href="{{ url_for('catalog') }}">
+					   href="{{ url_for('core.catalog') }}">
 						Заказать
 					</a>
 				</div>
@@ -88,7 +88,7 @@
 
 				<div class="section__flex no-grow w100">
 					<div class="block block-show clr-pink">
-						<img src="{{ url_for( 'static', filename = 'img/photos/bears.png' ) }}" alt="мишки">
+						<img src="{{ url_for( 'core.static', filename = 'img/photos/bears.png' ) }}" alt="мишки">
 
 						<h3 class="title title-h3">
 							Мишки
@@ -98,7 +98,7 @@
 					</div>
 
 					<div class="block block-show clr-pink">
-						<img src="{{ url_for( 'static', filename = 'img/photos/puppy_blue.png' ) }}" alt="щенок">
+						<img src="{{ url_for( 'core.static', filename = 'img/photos/puppy_blue.png' ) }}" alt="щенок">
 
 						<h3 class="title title-h3">
 							Щеночки
@@ -108,7 +108,7 @@
 					</div>
 
 					<div class="block block-show clr-pink">
-						<img src="{{ url_for( 'static', filename = 'img/photos/penguin.png' ) }}" alt="пингвин">
+						<img src="{{ url_for( 'core.static', filename = 'img/photos/penguin.png' ) }}" alt="пингвин">
 
 						<h3 class="title title-h3">
 							Пингвины
@@ -122,7 +122,7 @@
 
 				<div>
 					<a class="btn btn-lg btn-round btn-bold btn-white inline-block"
-					   href="{{ url_for('catalog') }}">
+					   href="{{ url_for('core.catalog') }}">
 						Смотреть все товары
 					</a>
 				</div>
@@ -150,61 +150,61 @@
 
 				<div class="section__flex w100">
 					<div class="block block-feedback">
-						<img class="block-feedback__ava" src="{{ url_for( 'static', filename = 'img/avatars/Tkach.jpg' ) }}" alt="ava">
+						<img class="block-feedback__ava" src="{{ url_for( 'core.static', filename = 'img/avatars/Tkach.jpg' ) }}" alt="ava">
 
 						<p class="block-feedback__name title title-h3">Даниэль</p>
 
-						<img class="block-feedback__like" src="{{ url_for( 'static', filename = 'img/icons/like.png' ) }}" alt="like">
+						<img class="block-feedback__like" src="{{ url_for( 'core.static', filename = 'img/icons/like.png' ) }}" alt="like">
 
 						<p class="block-feedback__text text">Интересный градиент получился 🙌</p>
 					</div>
 
 					<div class="block block-feedback">
-						<img class="block-feedback__ava" src="{{ url_for( 'static', filename = 'img/avatars/Tihon.jpg' ) }}" alt="ava">
+						<img class="block-feedback__ava" src="{{ url_for( 'core.static', filename = 'img/avatars/Tihon.jpg' ) }}" alt="ava">
 
 						<p class="block-feedback__name title title-h3">Тихохон</p>
 
-						<img class="block-feedback__like" src="{{ url_for( 'static', filename = 'img/icons/like.png' ) }}" alt="like">
+						<img class="block-feedback__like" src="{{ url_for( 'core.static', filename = 'img/icons/like.png' ) }}" alt="like">
 
 						<p class="block-feedback__text text">Нормальный такой сюрикен</p>
 					</div>
 
 					<div class="block block-feedback">
-						<img class="block-feedback__ava" src="{{ url_for( 'static', filename = 'img/avatars/Mamanya_Zya.jpg' ) }}" alt="ava">
+						<img class="block-feedback__ava" src="{{ url_for( 'core.static', filename = 'img/avatars/Mamanya_Zya.jpg' ) }}" alt="ava">
 
 						<p class="block-feedback__name title title-h3">Маман</p>
 
-						<img class="block-feedback__like" src="{{ url_for( 'static', filename = 'img/icons/like.png' ) }}" alt="like">
+						<img class="block-feedback__like" src="{{ url_for( 'core.static', filename = 'img/icons/like.png' ) }}" alt="like">
 
 						<p class="block-feedback__text text">Красиво. 👍😁</p>
 					</div>
 
 					<div class="block block-feedback">
-						<img class="block-feedback__ava" src="{{ url_for( 'static', filename = 'img/avatars/Sergo.jpg' ) }}" alt="ava">
+						<img class="block-feedback__ava" src="{{ url_for( 'core.static', filename = 'img/avatars/Sergo.jpg' ) }}" alt="ava">
 
 						<p class="block-feedback__name title title-h3">Серго</p>
 
-						<img class="block-feedback__like" src="{{ url_for( 'static', filename = 'img/icons/like.png' ) }}" alt="like">
+						<img class="block-feedback__like" src="{{ url_for( 'core.static', filename = 'img/icons/like.png' ) }}" alt="like">
 
 						<p class="block-feedback__text text">Найс пингвин</p>
 					</div>
 
 					<div class="block block-feedback">
-						<img class="block-feedback__ava" src="{{ url_for( 'static', filename = 'img/avatars/Shima.jpg' ) }}" alt="ava">
+						<img class="block-feedback__ava" src="{{ url_for( 'core.static', filename = 'img/avatars/Shima.jpg' ) }}" alt="ava">
 
 						<p class="block-feedback__name title title-h3">Шима</p>
 
-						<img class="block-feedback__like" src="{{ url_for( 'static', filename = 'img/icons/like.png' ) }}" alt="like">
+						<img class="block-feedback__like" src="{{ url_for( 'core.static', filename = 'img/icons/like.png' ) }}" alt="like">
 
 						<p class="block-feedback__text text">Мне даже нечего сказать)</p>
 					</div>
 
 					<div class="block block-feedback">
-						<img class="block-feedback__ava" src="{{ url_for( 'static', filename = 'img/avatars/user.png' ) }}" alt="ava">
+						<img class="block-feedback__ava" src="{{ url_for( 'core.static', filename = 'img/avatars/user.png' ) }}" alt="ava">
 
 						<p class="block-feedback__name title title-h3 clr-grey-text">Ваше имя</p>
 
-						<img class="block-feedback__like" src="{{ url_for( 'static', filename = 'img/icons/like.png' ) }}" alt="like">
+						<img class="block-feedback__like" src="{{ url_for( 'core.static', filename = 'img/icons/like.png' ) }}" alt="like">
 
 						<p class="block-feedback__text text clr-darkgrey-text">Тут можете быть и вы</p>
 					</div>

@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 class Config(object):
 	# Hardcode values
 	TEMPLATES_AUTO_RELOAD = True

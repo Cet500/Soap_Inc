@@ -58,8 +58,12 @@
 					<div class="section__flex no-grow section__filter w100">
 						{% for soap in soaps %}
 
-							<div class="block block-show clr-pink f-bears">
-								<img src="{{ url_for( 'static', filename = 'img/photos/'+soap.image+'.png') }}"
+							<div class="block block-show clr-pink
+								{% if soap.type == "BEAR" %} f-bears {% endif %}
+								{% if soap.type == "PUPPY" %} f-puppy {% endif %}
+								{% if soap.type == "PENGUIN" %} f-penguin {% endif %}
+							">
+								<img src="{{ url_for( 'core.static', filename = 'img/photos/'+soap.image+'.png') }}"
 									 alt="{{ soap.title }}">
 
 								<h3 class="title title-h3">
@@ -70,11 +74,15 @@
 
 								<p class="text">
 									<a class="btn btn-sm btn-round btn-bold inline-block btn-white"
-									   href="{{ url_for('info_bear') }}">
+									   href="
+										{% if soap.type == "BEAR" %} {{ url_for( "core.info_bear" ) }} {% endif %}
+										{% if soap.type == "PUPPY" %} {{ url_for( "core.info_puppy" ) }} {% endif %}
+										{% if soap.type == "PENGUIN" %} {{ url_for( "core.info_penguin" ) }} {% endif %}
+									">
 										Инфо</a>
 
 									<a class="btn btn-sm btn-round btn-bold btn-pink inline-block hidden"
-									   href="{{ url_for('cart') }}">
+									   href="{{ url_for('core.cart') }}">
 										Взято (1)</a>
 
 									<button class="btn btn-sm btn-round btn-bold btn-pink inline-block"
@@ -103,6 +111,6 @@
 
 {% block scripts %}
 
-	<script src="{{ url_for( 'static', filename = 'js/src/filter.js' ) }}"></script>
+	<script src="{{ url_for( 'core.static', filename = 'js/src/filter.js' ) }}"></script>
 
 {% endblock %}

@@ -3,7 +3,7 @@
 
 {% block page_style %}
 
-	<link rel="stylesheet" href="{{ url_for( 'static', filename = 'css/pages/cart.css' ) }}">
+	<link rel="stylesheet" href="{{ url_for( 'core.static', filename = 'css/pages/cart.css' ) }}">
 
 {% endblock %}
 
@@ -47,7 +47,7 @@
 	<script id="script__cart-template" type="text/html">
 		<div class="cart__block__row">
 			<div class="cart__block__row-icon">
-				<img src="static/img/photos/{{:image}}.png" alt="{{:name}}">
+				<img src="/img/photos/{{:image}}.png" alt="{{:name}}">
 			</div>
 			<div class="cart__block__row-info">
 				<h3 class="title title-h4">{{:name}}</h3>
